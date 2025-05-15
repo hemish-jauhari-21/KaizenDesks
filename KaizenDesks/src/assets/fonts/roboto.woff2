@@ -1,0 +1,22 @@
+my-project/
+│
+├── src/
+│   ├── html/
+│   │   ├── index.html
+│   │   ├── about.html
+│   │   └── contact.html
+│   │
+│   ├── css/
+│   │   ├── styles.css
+│   │   └── responsive.css
+│   │
+│   └── js/
+│       ├── script.js
+│       └── utils.js
+│
+├── assets/
+│   ├── images/
+│   └── fonts/
+│
+├── README.md
+└── package.json
