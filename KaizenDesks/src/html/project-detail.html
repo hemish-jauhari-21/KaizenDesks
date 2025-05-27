@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+    <title>Project Details | KaizenDesks Agency</title>
+    <meta name="description" content="Detailed view of our project work and case studies." />
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/components/loader.css">
+    <link rel="stylesheet" href="../css/project-detail.css">
+</head>
+
+<body data-barba="wrapper">
+    <div class="navbar">
+        <div class="logo">
+            <a href="index.html">Kaizen<span>Desks</span></a>
+        </div>
+        <button class="menu__btn">menu</button>
+    </div>
+
+    <div id="loader-container"></div>
+    <div id="menu-container"></div>
+    <script>
+        function loadComponent(htmlFile, containerId, scriptFile) {
+            fetch(htmlFile)
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById(containerId).innerHTML = data;
+                    const script = document.createElement("script");
+                    script.src = scriptFile;
+                    document.body.appendChild(script);
+                })
+                .catch(error => console.error(`Error loading ${htmlFile}:`, error));
+        }
+        loadComponent("components/loader.html", "loader-container", "../js/utils/loader.js");
+        loadComponent("components/menu.html", "menu-container", "../js/utils/menu.js");
+    </script>
+
+    <main data-barba="container" data-barba-namespace="project-detail">
+        <!-- Project detail content will be loaded dynamically -->
+        <div class="project-detail-container">
+            <div class="project-header">
+                <div class="back-button">
+                    <a href="index.html#projects-section">← Back to Projects</a>
+                </div>
+                <h1 id="project-title">Project Title</h1>
+                <div class="project-tags" id="project-tags">
+                    <!-- Tags will be inserted here -->
+                </div>
+            </div>
+
+            <div class="project-showcase">
+                <div class="project-gallery" id="project-gallery">
+                    <!-- Gallery images will be inserted here -->
+                </div>
+                
+                <!-- 3D Viewer (shown only for 3D projects) -->
+                <div class="model-viewer-container" id="model-viewer-container">
+                    <div id="3d-viewer"></div>
+                </div>
+            </div>
+
+            <div class="project-content">
+                <div class="project-details">
+                    <div class="project-description">
+                        <h2>Project Overview</h2>
+                        <p id="project-description">Project description will be loaded here.</p>
+                    </div>
+                    
+                    <div class="project-challenge">
+                        <h2>Challenge</h2>
+                        <p id="project-challenge">The challenge description will be loaded here.</p>
+                    </div>
+                    
+                    <div class="project-solution">
+                        <h2>Our Solution</h2>
+                        <p id="project-solution">The solution description will be loaded here.</p>
+                    </div>
+                </div>
+                
+                <div class="project-sidebar">
+                    <div class="project-info-box">
+                        <h3>Client</h3>
+                        <p id="project-client">Client name</p>
+                    </div>
+                    
+                    <div class="project-info-box">
+                        <h3>Year</h3>
+                        <p id="project-year">2023</p>
+                    </div>
+                    
+                    <div class="project-info-box">
+                        <h3>Technologies</h3>
+                        <ul id="project-technologies">
+                            <!-- Technologies will be inserted here -->
+                        </ul>
+                    </div>
+                    
+                    <div class="project-links">
+                        <h3>Project Links</h3>
+                        <div id="project-links">
+                            <!-- Links will be inserted here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="related-projects">
+                <h2>Related Projects</h2>
+                <div class="related-projects-grid" id="related-projects">
+                    <!-- Related projects will be inserted here -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="../js/utils/projects.js"></script>
+    <script src="../js/project-detail.js"></script>
+</body>
+
+</html> 
