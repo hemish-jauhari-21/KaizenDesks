@@ -7,20 +7,79 @@
     <title>KaizenDesks - Digital Solutions Agency</title>
     <meta name="description"
         content="Digital Design & Development Agency. Let's turn your ideas into captivating digital experiences." />
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/components/loader.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places&callback=initMap"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/plugins/TextPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/plugins/ScrollToPlugin.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 
 <body>
-    <header>
-        <nav class="navbar">
-            <a href="#" class="logo">KaizenDesks</a>
-            <div class="menu__items">
-                <a href="#home">Home</a>
-                <a href="#about">About Us</a>
-                <a href="#services">Services</a>
-                <a href="#contact">Contact</a>
+    <div class="load">
+        <div class="pre-loader">
+            <div class="loader"></div>
+            <div class="loader-bg"></div>
+        </div>
+        <div class="loader-content">
+            <div class="count">
+                <p>0</p>
             </div>
-            <button class="menu__btn">Menu</button>
+            <div class="copy">
+                <p class="ml16">Kaizen</p>
+            </div>
+        </div>
+
+        <div class="titles">
+            <div>
+                <span>where</span>
+            </div>
+            <div>
+                <span>imagination</span>
+            </div>
+            <div>
+                <span>meets</span>
+            </div>
+            <div>
+                <span>creativity</span>
+            </div>
+        </div>
+
+        <div class="brand">
+            <div class="header">
+                <span>k</span>
+                <span>a</span>
+                <span>i</span>
+                <span>z</span>
+                <span>e</span>
+                <span>n</span>
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <a href="#" class="logo" aria-label="KaizenDesks">
+                <span class="logo-text">KaizenDesks</span>
+            </a>
+            <div class="menu__items" role="menu">
+                <a href="#home" role="menuitem">Home</a>
+                <a href="#about" role="menuitem">About Us</a>
+                <a href="#services" role="menuitem">Services</a>
+                <a href="#contact" role="menuitem">Contact</a>
+            </div>
+            <button class="menu__btn" aria-label="Toggle menu" aria-expanded="false">
+                <span class="menu-icon"></span>
+            </button>
         </nav>
     </header>
 
@@ -31,13 +90,13 @@
                 Let's mix your ideas with our skills and
                 <span class="fancy magic">
                     <span class="magic-star">
-                        <svg viewBox="0 0 512 512">
+                        <svg viewBox="0 0 512 512" aria-hidden="true">
                             <path
                                 d="M512 255.1c0 11.34-7.406 20.86-18.44 23.64l-171.3 42.78l-42.78 171.1C276.7 504.6 267.2 512 255.9 512s-20.84-7.406-23.62-18.44l-42.66-171.2L18.47 279.6C7.406 276.8 0 267.3 0 255.1c0-11.34 7.406-20.83 18.44-23.61l171.2-42.78l42.78-171.1C235.2 7.406 244.7 0 256 0s20.84 7.406 23.62 18.44l42.78 171.2l171.2 42.78C504.6 235.2 512 244.6 512 255.1z" />
                         </svg>
                     </span>
                     <span class="magic-star">
-                        <svg viewBox="0 0 512 512">
+                        <svg viewBox="0 0 512 512" aria-hidden="true">
                             <path
                                 d="M512 255.1c0 11.34-7.406 20.86-18.44 23.64l-171.3 42.78l-42.78 171.1C276.7 504.6 267.2 512 255.9 512s-20.84-7.406-23.62-18.44l-42.66-171.2L18.47 279.6C7.406 276.8 0 267.3 0 255.1c0-11.34 7.406-20.83 18.44-23.61l171.2-42.78l42.78-171.1C235.2 7.406 244.7 0 256 0s20.84 7.406 23.62 18.44l42.78 171.2l171.2 42.78C504.6 235.2 512 244.6 512 255.1z" />
                         </svg>
@@ -46,19 +105,32 @@
                 </span>
             </h1>
             <p class="hero-subtitle">We provide innovative solutions to make your business grow.</p>
-            <a href="#contact" class="cta-button">Get Started</a>
+            <div class="hero-cta">
+                <a href="#contact" class="cta-button">Get Started</a>
+                <a href="#services" class="cta-button">View Our Services</a>
+            </div>
         </div>
         <div class="hero-image">
-            <div class="image-placeholder"></div>
+            <div id="model-container" class="model-container">
+                <canvas id="threejs-canvas"></canvas>
+            </div>
+            <div class="image-placeholder" aria-hidden="true">
+                <div class="hero-shapes">
+                    <div class="shape shape-1"></div>
+                    <div class="shape shape-2"></div>
+                    <div class="shape shape-3"></div>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="section about">
+    <section id="about" class="section about" style="position:relative; overflow:hidden;">
+        <div class="bg-svg bg-svg-about" aria-hidden="true"></div>
         <div class="container">
             <div class="section-heading">
-                <h2>About Us</h2>
-                <h3>Who We Are</h3>
+                <h2 class="cursor-reactive">About Us</h2>
+                <h3 class="cursor-reactive">Who We Are</h3>
             </div>
             <div class="about-content">
                 <div class="about-text">
@@ -91,81 +163,444 @@
                         <span class="benefit-icon">🤝</span>
                         <span class="benefit-text">Transparent communication & collaboration</span>
                     </div>
+                    <div class="benefit">
+                        <span class="benefit-icon">🌱</span>
+                        <span class="benefit-text">Sustainable & Ethical Practices</span>
+                    </div>
+                    <div class="benefit">
+                        <span class="benefit-icon">🧠</span>
+                        <span class="benefit-text">Continuous Learning Culture</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="section services">
+    <!-- <section id="services" class="section services" style="position:relative; overflow:hidden;">
+        <div class="bg-svg bg-svg-services" aria-hidden="true"></div>
         <div class="container">
             <div class="section-heading">
-                <h2>Our Services</h2>
-                <h3>Build Smart. Scale Fast. Secure Your Future.</h3>
+                <h2 class="cursor-reactive">Our Services</h2>
+                <h3 class="cursor-reactive">Build Smart. Scale Fast. Secure Your Future.</h3>
             </div>
-            <p class="services-intro">At KaizenDesks, we offer a wide range of digital services to help startups and enterprises unlock growth, automate processes, and build future-ready solutions. Whether you're starting from scratch or looking to enhance an existing product — we're your reliable tech partner.</p>
+            <p class="services-intro">At KaizenDesks, we offer a wide range of digital services to help startups and enterprises unlock growth, automate processes, and build future-ready solutions.</p>
+            <div class="services-carousel-container">
+              <div class="swiper services-swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide service-animated-card">
+                    <img src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?auto=format&fit=crop&w=800&q=80" alt="UI/UX Design" class="service-card-img" />
+                    <div class="services-item_title">UI/UX Design</div>
+                  </div>
+                  <div class="swiper-slide service-animated-card">
+                    <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=800&q=80" alt="Graphic Design" class="service-card-img" />
+                    <div class="services-item_title">Graphic Design</div>
+                  </div>
+                  <div class="swiper-slide service-animated-card">
+                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80" alt="Web Development" class="service-card-img" />
+                    <div class="services-item_title">Web Development</div>
+                  </div>
+                  <div class="swiper-slide service-animated-card">
+                    <img src="https://images.unsplash.com/photo-1634942537034-2531766767d1?auto=format&fit=crop&w=800&q=80" alt="Logo and Branding" class="service-card-img" />
+                    <div class="services-item_title">Logo and Branding</div>
+                  </div>
+                  <div class="swiper-slide service-animated-card">
+                    <img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&w=800&q=80" alt="Motion Graphics" class="service-card-img" />
+                    <div class="services-item_title">Motion Graphics</div>
+                  </div>
+                  <div class="swiper-slide service-animated-card">
+                    <img src="https://images.unsplash.com/photo-1607083206968-13611e3d76db?auto=format&fit=crop&w=800&q=80" alt="Packaging Design" class="service-card-img" />
+                    <div class="services-item_title">Packaging Design</div>
+                  </div>
+                  <div class="swiper-slide service-animated-card">
+                    <img src="https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?auto=format&fit=crop&w=800&q=80" alt="Product Design" class="service-card-img" />
+                    <div class="services-item_title">Product Design</div>
+                  </div>
+                  <div class="swiper-slide service-animated-card">
+                    <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80" alt="Illustration" class="service-card-img" />
+                    <div class="services-item_title">Illustration</div>
+                  </div>
+                  <div class="swiper-slide service-animated-card">
+                    <img src="https://images.unsplash.com/photo-1452587925148-ce544e77e70d?auto=format&fit=crop&w=800&q=80" alt="Photography" class="service-card-img" />
+                    <div class="services-item_title">Photography</div>
+                  </div>
+                </div>
+                <div class="swiper-button-prev custom-swiper-btn"></div>
+                <div class="swiper-button-next custom-swiper-btn"></div>
+              </div>
+            </div> 
+        </div>
+    </section> -->
+
+    
+
+    <!-- Extended Services Section -->
+    <section class="extended-services">
+        
+        <div class="hero">
+            <p>We make <span>modern</span> & <span>intuitive</span> solutions for your business</p>
+        </div>
+        
+        <div class="services">
+            <div class="top">
+                
+                <p>
+                    Whether you are a development agency looking to outsource design work, a company in search of a
+                    Product Designer or Product Team, a marketing agency that needs a landing page, a startup that wants
+                    to launch an app, or an enterprise that plans to rebrand or redesign its website, we are ready to
+                    take on any challenge with confidence and expertise.
+                </p>
+            </div>
+        </div>
+
+        <div class="format-container">
+            <div class="services_box services-animated-grid">
+                <div class="services_item service-animated-card">
+                    <div class="services-item_link">
+                        <div class="services-item_bg"></div>
+                        <img src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?auto=format&fit=crop&w=800&q=80" alt="UI/UX Design" class="service-card-img" />
+                        <div class="services-item_title">UI/UX Design</div>
+                    </div>
+                </div>
+                <div class="services_item service-animated-card">
+                    <div class="services-item_link">
+                        <div class="services-item_bg"></div>
+                        <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=800&q=80" alt="Graphic Design" class="service-card-img" />                        
+                        <div class="services-item_title">Graphic Design</div>
+                    </div>
+                </div>
+                <div class="services_item service-animated-card">
+                    <div class="services-item_link">
+                        <div class="services-item_bg"></div>
+                        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80" alt="Web Development" class="service-card-img" />
+                        <div class="services-item_title">Web Development</div>
+                    </div>
+                </div>
+                <div class="services_item service-animated-card">
+                    <div class="services-item_link">
+                        <div class="services-item_bg"></div>
+                        <img src="https://images.unsplash.com/photo-1634942537034-2531766767d1?auto=format&fit=crop&w=800&q=80" alt="Logo and Branding" class="service-card-img" />
+                        <div class="services-item_title">Logo and Branding</div>
+                    </div>
+                </div>
+                <div class="services_item service-animated-card">
+                    <div class="services-item_link">
+                        <div class="services-item_bg"></div>
+                        <img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&w=800&q=80" alt="Motion Graphics" class="service-card-img" />
+                        <div class="services-item_title">Motion Graphics</div>
+                    </div>
+                </div>
+                <div class="services_item service-animated-card">
+                    <div class="services-item_link">
+                        <div class="services-item_bg"></div>
+                        <img src="https://images.unsplash.com/photo-1607083206968-13611e3d76db?auto=format&fit=crop&w=800&q=80" alt="Packaging Design" class="service-card-img" />
+                        <div class="services-item_title">Packaging Design</div>
+                    </div>
+                </div>
+                <div class="services_item service-animated-card">
+                    <div class="services-item_link">
+                        <div class="services-item_bg"></div>
+                        <img src="https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?auto=format&fit=crop&w=800&q=80" alt="Product Design" class="service-card-img" />
+                        <div class="services-item_title">Product Design</div>
+                    </div>
+                </div>
+                <div class="services_item service-animated-card">
+                    <div class="services-item_link">
+                        <div class="services-item_bg"></div>
+                        <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80" alt="Illustration" class="service-card-img" />
+                        <div class="services-item_title">Illustration</div>
+                    </div>
+                </div>
+                <div class="services_item service-animated-card">
+                    <div class="services-item_link">
+                        <div class="services-item_bg"></div>
+                        <img src="https://images.unsplash.com/photo-1452587925148-ce544e77e70d?auto=format&fit=crop&w=800&q=80" alt="Photography" class="service-card-img" />
+                        <div class="services-item_title">Photography</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="qualities" style="position:relative; overflow:hidden;">
+            <div class="bg-svg bg-svg-qualities" aria-hidden="true"></div>
+            <div class="head">
+                <h2 class="quality-animate-title cursor-reactive">QUALITY</h2>
+                <p class="quality-animate-desc cursor-reactive">
+                    Explore the synergy of our collective expertise, where each team member's distinct talents converge
+                    to shape a vision of the product that's truly extraordinary.
+                </p>
+            </div>
+            <div class="top">
+                <div class="box quality-animate-box">
+                    <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=80&q=80" alt="Craftsmanship">
+                    <div class="info">
+                        <h3 class="quality-animate-text">Craftsmanship</h3>
+                        <p class="quality-animate-text">Meticulous attention<br>to detail.</p>
+                    </div>
+                </div>
+                <div class="box quality-animate-box">
+                    <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=80&q=80" alt="Versatile">
+                    <div class="info">
+                        <h3 class="quality-animate-text">Versatile</h3>
+                        <p class="quality-animate-text">Adaptable solutions<br>for your needs.</p>
+                    </div>
+                </div>
+                <div class="box quality-animate-box">
+                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=80&q=80" alt="Efficiency">
+                    <div class="info">
+                        <h3 class="quality-animate-text">Efficiency</h3>
+                        <p class="quality-animate-text">Streamlined workflows<br>and solutions.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom">
+                <div class="box quality-animate-box">
+                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=80&q=80" alt="Simplicity">
+                    <div class="info">
+                        <h3 class="quality-animate-text">Simplicity</h3>
+                        <p class="quality-animate-text">Stripping away the<br>unnecessary.</p>
+                    </div>
+                    
+                </div>
+                <div class="box quality-animate-box">
+                    <div class="info">
+                        <h3 class="quality-animate-text">Collaboration</h3>
+                        <p class="quality-animate-text">Building together<br>for success.</p>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=80&q=80" alt="Collaboration">
+                </div>
+                <div class="box quality-animate-box">
+                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=80&q=80" alt="Security">
+                    <div class="info">
+                        <h3 class="quality-animate-text">Security</h3>
+                        <p class="quality-animate-text">Protecting data & systems with<br>robust, up-to-date practices.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Projects Section -->
+        <div class="projects-section" id="projects-section" style="position:relative; overflow:hidden;">
+            <div class="bg-svg bg-svg-projects" aria-hidden="true"></div>
+            <div class="head">
+                <h2 class="cursor-reactive">OUR PROJECTS</h2>
+                <p class="cursor-reactive">
+                    Explore our portfolio of successful projects across various domains. Each project represents our commitment to excellence and innovation.
+                </p>
+            </div>
             
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">📱</div>
-                    <h3>Mobile App Development</h3>
-                    <p>From MVPs to full-scale applications, we design and build powerful Android & iOS apps that are fast, scalable, and intuitive.</p>
-                    <p>Build your first mobile app with us and launch your startup with confidence.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">💻</div>
-                    <h3>Website Development</h3>
-                    <p>Whether it's a landing page, business portal, or e-commerce platform — we create elegant, responsive, and high-performance websites tailored to your needs.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🔐</div>
-                    <h3>Cybersecurity & VAPT</h3>
-                    <p>Protect your business from threats with our advanced Vulnerability Assessment and Penetration Testing services. We help you identify, analyze, and patch security risks before attackers do.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🤖</div>
-                    <h3>AI/ML & Automation</h3>
-                    <p>Make your business smarter with AI and machine learning solutions to automate tasks, uncover insights, and improve decision-making.</p>
-                    <p>Optimize operations. Enhance productivity. Drive innovation.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🧪</div>
-                    <h3>Software Testing & QA</h3>
-                    <p>Ensure your software is bug-free, stable, and user-ready with our comprehensive testing and quality assurance services.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🎨</div>
-                    <h3>UI/UX Design</h3>
-                    <p>We design digital experiences that are not only visually stunning but also user-centric and conversion-optimized. Good design is good business.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🛠</div>
-                    <h3>Product Support & Maintenance</h3>
-                    <p>Already have a product? We offer continuous support — including bug fixing, performance optimization, updates, and feature upgrades — so your product evolves with your users.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🧠</div>
-                    <h3>Software Consulting</h3>
-                    <p>Looking for expert guidance? Our team helps you validate ideas, choose the right tech stack, and design product strategies that align with your business goals.</p>
+            <!-- Tab Navigation -->
+            <div class="tabs-container">
+                <div class="tabs">
+                    <button class="tab-btn active" data-tab="all">All Projects</button>
+                    <button class="tab-btn" data-tab="cyber">Cyber Security</button>
+                    <button class="tab-btn" data-tab="web">Websites</button>
+                    <button class="tab-btn" data-tab="app">Mobile Apps</button>
+                    <button class="tab-btn" data-tab="3d">3D & Animation</button>
                 </div>
             </div>
             
-            <div class="clients-section">
-                <h3>🌍 Who Can Benefit from Our Services?</h3>
-                <div class="clients-list">
-                    <div class="client-type">✔ Startups looking to build their first product</div>
-                    <div class="client-type">✔ Enterprises seeking digital transformation</div>
-                    <div class="client-type">✔ Government and NGO projects</div>
-                    <div class="client-type">✔ Agencies needing white-label tech partners</div>
-                    <div class="client-type">✔ Businesses looking for automation or cybersecurity solutions</div>
+            <!-- Projects Container -->
+            <div class="projects-container">
+                <div class="tab-content active" id="all">
+                    <div class="projects-grid">
+                        <!-- Project Card 1 -->
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="../assets/projects/project1.webp" alt="SecureGuard Dashboard">
+                            </div>
+                            <div class="project-info">
+                                <h3>SecureGuard Dashboard</h3>
+                                <p>A comprehensive security monitoring dashboard with real-time threat detection and response capabilities.</p>
+                                <div class="project-tags">
+                                    <span class="project-tag">React</span>
+                                    <span class="project-tag">Node.js</span>
+                                    <span class="project-tag">Cyber Security</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project Card 2 -->
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="../assets/projects/project2.webp" alt="EcoTrack Mobile App">
+                            </div>
+                            <div class="project-info">
+                                <h3>EcoTrack Mobile App</h3>
+                                <p>An innovative mobile application for tracking and reducing personal carbon footprint.</p>
+                                <div class="project-tags">
+                                    <span class="project-tag">Flutter</span>
+                                    <span class="project-tag">Firebase</span>
+                                    <span class="project-tag">Mobile App</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project Card 3 -->
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="../assets/projects/project3.webp" alt="Virtual Showroom">
+                            </div>
+                            <div class="project-info">
+                                <h3>Virtual Showroom</h3>
+                                <p>Interactive 3D showroom experience for a luxury automotive brand.</p>
+                                <div class="project-tags">
+                                    <span class="project-tag">Three.js</span>
+                                    <span class="project-tag">WebGL</span>
+                                    <span class="project-tag">3D Animation</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project Card 4 -->
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="../assets/projects/project4.webp" alt="HealthTech Platform">
+                            </div>
+                            <div class="project-info">
+                                <h3>HealthTech Platform</h3>
+                                <p>A comprehensive healthcare management system for clinics and hospitals.</p>
+                                <div class="project-tags">
+                                    <span class="project-tag">Vue.js</span>
+                                    <span class="project-tag">Python</span>
+                                    <span class="project-tag">Healthcare</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="cyber">
+                    <div class="projects-grid">
+                        <!-- Cyber Security Projects -->
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="../assets/projects/cyber1.webp" alt="Threat Detection System">
+                            </div>
+                            <div class="project-info">
+                                <h3>Threat Detection System</h3>
+                                <p>AI-powered system for detecting and preventing cyber security threats in real-time.</p>
+                                <div class="project-tags">
+                                    <span class="project-tag">Python</span>
+                                    <span class="project-tag">ML</span>
+                                    <span class="project-tag">Security</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="web">
+                    <div class="projects-grid">
+                        <!-- Web Projects -->
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="../assets/projects/web1.webp" alt="E-commerce Platform">
+                            </div>
+                            <div class="project-info">
+                                <h3>E-commerce Platform</h3>
+                                <p>Modern e-commerce solution with advanced features and seamless user experience.</p>
+                                <div class="project-tags">
+                                    <span class="project-tag">Next.js</span>
+                                    <span class="project-tag">Stripe</span>
+                                    <span class="project-tag">E-commerce</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="app">
+                    <div class="projects-grid">
+                        <!-- Mobile App Projects -->
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="../assets/projects/app1.webp" alt="Fitness Tracking App">
+                            </div>
+                            <div class="project-info">
+                                <h3>Fitness Tracking App</h3>
+                                <p>Comprehensive fitness tracking application with personalized workout plans.</p>
+                                <div class="project-tags">
+                                    <span class="project-tag">React Native</span>
+                                    <span class="project-tag">Firebase</span>
+                                    <span class="project-tag">Health</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="3d">
+                    <div class="projects-grid">
+                        <!-- 3D & Animation Projects -->
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="../assets/projects/3d1.webp" alt="Product Configurator">
+                            </div>
+                            <div class="project-info">
+                                <h3>3D Product Configurator</h3>
+                                <p>Interactive 3D product customization tool for furniture company.</p>
+                                <div class="project-tags">
+                                    <span class="project-tag">Three.js</span>
+                                    <span class="project-tag">WebGL</span>
+                                    <span class="project-tag">3D Design</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Testimonial Section -->
+    <section class="testimonial-section">
+      <div class="testimonial-container">
+        <div class="testimonial-left">
+          <span class="testimonial-badge">CLIENT'S TESTIMONIAL</span>
+          <h2 class="testimonial-title">Real Stories From People<br>What We Do</h2>
+          <p class="testimonial-desc">We cherish the trust our clients place in us. Through their testimonials, see how our insurance solutions have positively impacted their lives. From easy claims to personalized service, our clients share how we help them.</p>
+          <div class="testimonial-rating">
+            <button class="testimonial-btn">View All Reviews</button>
+            <div class="testimonial-stars">
+              <span class="stars">
+                <img src="https://cdn.trustpilot.net/brand-assets/4.8-stars.svg" alt="4.8 stars" style="height: 28px; vertical-align: middle;"/>
+              </span>
+              <span class="rating-value">4.8</span>
+            </div>
+            <span class="testimonial-reviews">From 200+ Reviews</span>
+          </div>
+        </div>
+        <div class="testimonial-right">
+          <div class="testimonial-card">
+            <span class="testimonial-quote">&ldquo;</span>
+            <p class="testimonial-text">As a small business owner I needed a reliablecoverag. provided comprehensive options tailored to my need. Their support has been invaluable. Their disability too coverage, kept me afloat during a tough time. I will be forever grateful. Their team is always ready to help.</p>
+            <div class="testimonial-user">
+              <img class="testimonial-avatar" src="https://randomuser.me/api/portraits/men/32.jpg" alt="Daniel Scoot"/>
+              <div>
+                <span class="testimonial-name">Mr. Daniel Scoot</span><br>
+                <span class="testimonial-role">CEO at Softconic</span>
+              </div>
+            </div>
+            <span class="testimonial-quote testimonial-quote-end">&rdquo;</span>
+          </div>
+          <div class="testimonial-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Contact Section -->
-    <section id="contact" class="section contact">
-        <div class="container">
+    <section id="contact" class="section contact" style="position:relative; min-height:500px;">
+        <div class="map-background" style="position:absolute; top:0; left:0; width:100%; height:100%; z-index:1; border-radius:0; overflow:hidden;">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.817327964624!2d77.3888213150447!3d28.53551698244739!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce511b8b6b7b1%3A0x2b8b6b7b1b8b6b7b!2sNoida%2C%20Uttar%20Pradesh%2C%20India!5e0!3m2!1sen!2sus!4v1680000000000!5m2!1sen!2sus"
+                width="100%" height="100%" style="border:0; filter: grayscale(0.2) brightness(0.9);" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="container" style="position:relative; z-index:2; background:rgba(255,255,255,0.95); border-radius:16px; margin-top:2rem; box-shadow:0 4px 24px rgba(0,0,0,0.08);">
             <div class="section-heading">
                 <h2>Contact Us</h2>
                 <h3>Let's Connect</h3>
@@ -174,30 +609,49 @@
                 <div class="contact-info">
                     <p>Want to discuss your project in person? Meet us at one of our locations:</p>
                     <div class="locations">
-                        <div class="location">📍 California, USA</div>
-                        <div class="location">📍 Noida, India</div>
-                        <div class="location">📍 Nagpur, India</div>
+                        <div class="location">
+                            <span class="location-icon">📍</span>
+                            <span>California, USA</span>
+                        </div>
+                        <div class="location">
+                            <span class="location-icon">📍</span>
+                            <span>Noida, India</span>
+                        </div>
+                        <div class="location">
+                            <span class="location-icon">📍</span>
+                            <span>Nagpur, India</span>
+                        </div>
                     </div>
                     <p>Or simply book a virtual meeting. We're just a message away.</p>
-                    <a href="#" class="cta-button">Book a Free Consultation</a>
+                    <a href="#" class="cta-button meeting-button">
+                        <span>Book a Free Consultation</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </a>
                 </div>
-                <div class="contact-form">
-                    <form>
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="submit-button">Send Message</button>
-                    </form>
-                </div>
+                <form class="contact-form" action="#" method="POST">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required placeholder="Your name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required placeholder="your@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required placeholder="Tell us about your project"></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">
+                        <span>Send Message</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="22" y1="2" x2="11" y2="13"></line>
+                            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                        </svg>
+                    </button>
+                </form>
             </div>
         </div>
     </section>
@@ -205,9 +659,8 @@
     <!-- Call to Action -->
     <section class="cta-section">
         <div class="container">
-            <h2>Let's Build Something Great</h2>
-            <p>Your idea. Our expertise. Endless possibilities.</p>
-            <a href="#contact" class="cta-button">Get Started</a>
+            <h2>Let's Build Something Great Together</h2>
+            <a href="#contact" class="cta-button">Get in Touch</a>
         </div>
     </section>
 
@@ -217,43 +670,87 @@
             <div class="footer-content">
                 <div class="footer-logo">
                     <h3>KaizenDesks</h3>
-                    <p>Digital Solutions Agency</p>
+                    <p>Digital Design & Development Agency. Let's turn your ideas into captivating digital experiences.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Follow us on Twitter">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Connect with us on LinkedIn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                <rect x="2" y="9" width="4" height="12"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Follow us on Instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Contact us on WhatsApp">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                            </svg>
+                        </a>
+                    </div>
                 </div>
                 <div class="footer-links">
-                    <h4>Quick Links</h4>
+                    <h4>Product</h4>
+                    <a href="#">E-Books</a>
+                    <a href="#">Press & Media</a>
+                    <a href="#">Testimonials</a>
+                    <a href="#">Get a Quote</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
                     <a href="#home">Home</a>
                     <a href="#about">About Us</a>
                     <a href="#services">Services</a>
                     <a href="#contact">Contact</a>
                 </div>
                 <div class="footer-contact">
-                    <h4>Contact Us</h4>
-                    <p>Email: info@kaizendesks.com</p>
-                    <p>Phone: +1 (123) 456-7890</p>
+                    <h4>Quick Contact</h4>
+                    <p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        <span>123 Business Avenue, LA, USA 90001</span>
+                    </p>
+                    <p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                        <span>info@kaizendesks.com</span>
+                    </p>
+                    <p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                        </svg>
+                        <span>+1 (123) 456-7890</span>
+                    </p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 KaizenDesks. All rights reserved.</p>
+                <p>&copy; 2024 KaizenDesks. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                </div>
             </div>
         </div>
     </footer>
 
-    <script>
-        // Simple menu toggle for mobile
-        document.querySelector('.menu__btn').addEventListener('click', function() {
-            document.querySelector('.menu__items').classList.toggle('show');
-        });
-
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
+    <script src="../js/utils/loader.js"></script>
+    <script src="../js/utils/projects.js"></script>
+    <script src="../js/components/testimonials.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </body>
 
 </html>
