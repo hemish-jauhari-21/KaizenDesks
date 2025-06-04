@@ -529,13 +529,16 @@ a:hover {
 .hero-content {
     position: relative;
     z-index: 1;
-    flex: 0 0 50%;
-    padding-right: 50px;
-    max-width: 600px;
+    flex: 0 0 60%;
+    padding-right: 20px;
+    padding-left: 20px;
+    max-width: 800px;
+    margin-top: 50px;
+    
 }
 
 .hero h1 {
-    font-size: 3.5rem;
+    font-size: 3.9rem;
     font-weight: 700;
     line-height: 1.2;
     margin-bottom: 20px;
@@ -554,12 +557,15 @@ a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-left: 120px;
+    margin-top: 80px;
+    
 }
 
 .model-container {
     position: absolute;
     top: 0;
-    left: 0;
+    right: 28.5%;
     width: 100%;
     height: 100%;
     z-index: 2;
@@ -571,7 +577,7 @@ a:hover {
     outline: none;
 }
 
-.image-placeholder {
+/* .image-placeholder {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -581,7 +587,7 @@ a:hover {
     justify-content: center;
     align-items: center;
     box-shadow: var(--shadow);
-}
+} */
 
 /* Fancy Magic Text Animation */
 .magic {
@@ -655,9 +661,17 @@ a:hover {
     text-align: center;
 }
 
+.about .section-heading h2 {
+    font-size: 2.5rem;
+}
+
+.about .section-heading h3 {
+    font-size: 1.7rem;
+}
+
 .about-text p {
     margin-bottom: 20px;
-    font-size: 1.1rem;
+    font-size: 1.4rem;
     color: var(--text-color);
 }
 
@@ -1000,6 +1014,7 @@ a:hover {
     color: transparent;
     -webkit-text-stroke: 3px var(--background);
     text-stroke: 1px var(--background);
+    font-family: "Gallery Modern", sans-serif;
 }
 
 .cta-section .container {
@@ -1603,9 +1618,9 @@ footer {
 }
 
 .extended-services .services .top p {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     line-height: 1.8;
-    color: var(--text-light);
+    color: var(--primary-color);
 }
 
 /* Services Grid */
@@ -2039,52 +2054,26 @@ footer {
     cursor: pointer;
 }
 
-.service-animated-card::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(circle at var(--mouse-x) var(--mouse-y), 
-                               rgba(139, 92, 246, 0.15) 0%,
-                               rgba(139, 92, 246, 0) 50%);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    pointer-events: none;
-    z-index: 1;
+.service-animated-card:hover {
+    background: #000000;
+    transform: translateY(-10px);
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.2);
 }
 
-.service-animated-card:hover::before {
-    opacity: 1;
+.service-animated-card:hover .services-item_title {
+    color: #ffffff;
 }
 
-.service-animated-card::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    border: 2px solid transparent;
-    border-radius: 12px;
-    background: linear-gradient(135deg, #8b5cf6, #a78bfa) border-box;
-    -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
-    -webkit-mask-composite: destination-out;
-    mask-composite: exclude;
-    opacity: 0;
-    transition: opacity 0.3s ease;
+.service-animated-card:hover .service-desc {
+    color: #e5e5e5;
 }
 
-.service-animated-card:hover::after {
-    opacity: 1;
-}
-
-.service-card-img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-    filter: brightness(0.95);
+.service-animated-card:hover .service-link {
+    color: var(--primary-color);
 }
 
 .service-animated-card:hover .service-card-img {
-    transform: scale(1.05);
-    filter: brightness(1.05);
+    filter: brightness(0.8);
 }
 
 .services-item_title {
@@ -2093,7 +2082,7 @@ footer {
     font-size: 1.25rem;
     font-weight: 600;
     color: #2d3748;
-    background: #ffffff;
+    background: transparent;
     flex-grow: 1;
     display: flex;
     align-items: center;
@@ -2103,76 +2092,25 @@ footer {
     z-index: 2;
 }
 
-.service-animated-card:hover .services-item_title {
-    background: #f7fafc;
-    color: #8b5cf6;
-    transform: translateY(-2px);
+.service-desc {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 18px;
+    text-align: center;
+    flex: 1 1 auto;
+    transition: color 0.3s ease;
 }
 
-/* Add contrasting colors for different service cards */
-.service-animated-card:nth-child(odd) .services-item_title {
-    background: #f0f9ff;
-}
-
-.service-animated-card:nth-child(even) .services-item_title {
-    background: #fdf2f8;
-}
-
-.service-animated-card:nth-child(3n) .services-item_title {
-    background: #f0fdf4;
-}
-
-.service-animated-card:nth-child(3n+1) .services-item_title {
-    background: #fff7ed;
-}
-
-.service-animated-card:nth-child(3n+2) .services-item_title {
-    background: #faf5ff;
-}
-
-/* Update swiper container styles */
-.services-carousel-container {
-    padding: 20px 0;
-    margin: 0 -20px;
-}
-
-.services-swiper {
-    padding: 20px;
-}
-
-.swiper-slide.service-animated-card {
-    height: 400px;
-    margin: 0 10px;
-}
-
-/* Update navigation buttons */
-.custom-swiper-btn {
-    width: 60px;
-    height: 60px;
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(195, 240, 15, 0.1);
-    backdrop-filter: blur(10px);
-    border-radius: var(--radius);
-    display: flex;
+.service-link {
+    display: inline-flex;
     align-items: center;
-    justify-content: center;
-    transition: all 0.4s ease;
-}
-
-.custom-swiper-btn::after {
-    content: '';
-    width: 30px;
-    height: 2px;
-    background: var(--primary-color);
-    position: relative;
-}
-
-.custom-swiper-btn:hover {
-    background: var(--primary-color);
-}
-
-.custom-swiper-btn:hover::after {
-    background: var(--background);
+    font-weight: 600;
+    color: #8b5cf6;
+    text-decoration: none;
+    font-size: 1rem;
+    padding-bottom: 2px;
+    margin-top: auto;
+    transition: color 0.2s;
 }
 
 /* SVG/Gradient Backgrounds for Sections */

@@ -695,30 +695,24 @@ if (window.gsap && window.ScrollTrigger) {
         });
     });
 
-    // Animate text color on hover
+    // Animate background color on hover
     document.querySelectorAll('.service-animated-card').forEach(card => {
         card.addEventListener('mouseenter', () => {
-            gsap.to(card.querySelector('.services-item_title'), { color: '#fff', duration: 0.3 });
-            gsap.to(card, { scale: 1.09, rotate: -3, boxShadow: '0 24px 64px rgba(251, 194, 235, 0.35)', duration: 0.3 });
+            gsap.to(card, { 
+                backgroundColor: '#000000',
+                duration: 0.3,
+                ease: 'power2.out'
+            });
         });
         card.addEventListener('mouseleave', () => {
-            gsap.to(card.querySelector('.services-item_title'), { color: '#222', duration: 0.3 });
-            gsap.to(card, { scale: 1, rotate: 0, boxShadow: '0 8px 32px rgba(161, 140, 209, 0.15)', duration: 0.3 });
+            gsap.to(card, { 
+                backgroundColor: '#ffffff',
+                duration: 0.3,
+                ease: 'power2.out'
+            });
         });
     });
 }
-
-// Add cursor glow effect for service cards
-document.querySelectorAll('.service-animated-card').forEach(card => {
-    card.addEventListener('mousemove', e => {
-        const rect = card.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-        
-        card.style.setProperty('--mouse-x', `${x}px`);
-        card.style.setProperty('--mouse-y', `${y}px`);
-    });
-});
 
 // Qualities section animation
 function animateQualitiesSection() {
