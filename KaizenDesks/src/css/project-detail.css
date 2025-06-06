@@ -35,7 +35,7 @@
     display: inline-flex;
     align-items: center;
     font-size: 16px;
-    color: #333;
+    color: #C3F00F;
     text-decoration: none;
     transition: all 0.3s ease;
     position: relative;
@@ -59,6 +59,7 @@
 /* Project header */
 .project-header {
     margin-bottom: 50px;
+    color: #C3F00F;
 }
 
 .project-header h1 {
@@ -68,6 +69,7 @@
     opacity: 0;
     transform: translateY(20px);
     animation: slideInUp 0.8s ease forwards 0.5s;
+    
 }
 
 @keyframes slideInUp {
@@ -87,12 +89,13 @@
     gap: 10px;
     opacity: 0;
     animation: fadeIn 0.5s ease forwards 0.8s;
+    
 }
 
 .project-tag {
     display: inline-block;
     padding: 6px 14px;
-    background-color: #f0f0f0;
+    background-color: #000;
     border-radius: 30px;
     font-size: 14px;
     font-weight: 500;
@@ -103,6 +106,7 @@
 .project-tag:hover {
     transform: scale(1.05);
     background-color: #e0e0e0;
+    color: #000;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
@@ -185,6 +189,7 @@
     margin-bottom: 80px;
     opacity: 0;
     animation: fadeIn 0.8s ease forwards 1.6s;
+    color: #C3F00F;
 }
 
 .project-details h2 {
@@ -216,7 +221,7 @@
 .project-details p {
     font-size: 16px;
     line-height: 1.7;
-    color: #333;
+    color: #f0f0f0;
     margin-bottom: 20px;
     opacity: 0;
     transform: translateY(10px);
@@ -226,7 +231,7 @@
 
 /* Sidebar */
 .project-sidebar {
-    background-color: #f8f8f8;
+    background-color: #C3F00F;
     padding: 30px;
     border-radius: 8px;
     height: fit-content;
@@ -288,6 +293,7 @@
 
 .project-info-box ul {
     padding-left: 20px;
+    color: black;
 }
 
 .project-info-box li {
@@ -302,6 +308,11 @@
     margin-top: 30px;
     opacity: 0;
     animation: fadeIn 0.5s ease forwards 2.4s;
+}
+
+.project-links h3{
+    color: black;
+    padding-bottom: 5px;
 }
 
 .project-link-btn {
@@ -750,4 +761,4 @@
 .delay-2 { transition-delay: 0.2s; }
 .delay-3 { transition-delay: 0.3s; }
 .delay-4 { transition-delay: 0.4s; }
-.delay-5 { transition-delay: 0.5s; } 
+.delay-5 { transition-delay: 0.5s; }

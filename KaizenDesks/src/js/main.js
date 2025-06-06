@@ -618,7 +618,7 @@ function init3DScene() {
     // Create a cube with better materials
     const geometry = new THREE.BoxGeometry(2, 2, 2);
     const material = new THREE.MeshPhongMaterial({
-        color: 0x8b5cf6, // Changed to match the site's primary color
+        color: 0x70767A, // Changed to match the theme color
         specular: 0xffffff,
         shininess: 100,
         reflectivity: 1
@@ -695,30 +695,24 @@ if (window.gsap && window.ScrollTrigger) {
         });
     });
 
-    // Animate text color on hover
+    // Animate background color on hover
     document.querySelectorAll('.service-animated-card').forEach(card => {
         card.addEventListener('mouseenter', () => {
-            gsap.to(card.querySelector('.services-item_title'), { color: '#fff', duration: 0.3 });
-            gsap.to(card, { scale: 1.09, rotate: -3, boxShadow: '0 24px 64px rgba(251, 194, 235, 0.35)', duration: 0.3 });
+            gsap.to(card, { 
+                backgroundColor: '#000000',
+                duration: 0.3,
+                ease: 'power2.out'
+            });
         });
         card.addEventListener('mouseleave', () => {
-            gsap.to(card.querySelector('.services-item_title'), { color: '#222', duration: 0.3 });
-            gsap.to(card, { scale: 1, rotate: 0, boxShadow: '0 8px 32px rgba(161, 140, 209, 0.15)', duration: 0.3 });
+            gsap.to(card, { 
+                backgroundColor: '#ffffff',
+                duration: 0.3,
+                ease: 'power2.out'
+            });
         });
     });
 }
-
-// Add cursor glow effect for service cards
-document.querySelectorAll('.service-animated-card').forEach(card => {
-    card.addEventListener('mousemove', e => {
-        const rect = card.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-        
-        card.style.setProperty('--mouse-x', `${x}px`);
-        card.style.setProperty('--mouse-y', `${y}px`);
-    });
-});
 
 // Qualities section animation
 function animateQualitiesSection() {
@@ -781,60 +775,4 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   }
-});
-
-// Testimonial Slider Functionality
-const testimonials = [
-  {
-    text: "As a small business owner I needed a reliablecoverag. provided comprehensive options tailored to my need. Their support has been invaluable. Their disability too coverage, kept me afloat during a tough time. I will be forever grateful. Their team is always ready to help.",
-    name: "Mr. Daniel Scoot",
-    role: "CEO at Softconic",
-    avatar: "https://randomuser.me/api/portraits/men/32.jpg"
-  },
-  {
-    text: "The team at KaizenDesks exceeded my expectations. Their attention to detail and customer service is unmatched. I highly recommend them to anyone looking for quality and reliability.",
-    name: "Ms. Priya Sharma",
-    role: "Founder at InnovateX",
-    avatar: "https://randomuser.me/api/portraits/women/44.jpg"
-  },
-  {
-    text: "From start to finish, the process was smooth and professional. The solutions provided were tailored to our needs and delivered on time. Thank you for your dedication!",
-    name: "Mr. John Lee",
-    role: "CTO at TechBridge",
-    avatar: "https://randomuser.me/api/portraits/men/65.jpg"
-  }
-];
-
-function updateTestimonial(index) {
-  const testimonial = testimonials[index];
-  document.querySelector('.testimonial-text').textContent = testimonial.text;
-  document.querySelector('.testimonial-name').textContent = testimonial.name;
-  document.querySelector('.testimonial-role').textContent = testimonial.role;
-  document.querySelector('.testimonial-avatar').src = testimonial.avatar;
-  // Update dots
-  document.querySelectorAll('.testimonial-dots .dot').forEach((dot, i) => {
-    dot.classList.toggle('active', i === index);
-  });
-}
-
-document.addEventListener('DOMContentLoaded', function() {
-  // Testimonial dots click
-  const testimonialDots = document.querySelectorAll('.testimonial-dots .dot');
-  testimonialDots.forEach((dot, idx) => {
-    dot.addEventListener('click', function() {
-      updateTestimonial(idx);
-    });
-  });
-
-  // View All Reviews button
-  const viewAllBtn = document.querySelector('.testimonial-btn');
-  if (viewAllBtn) {
-    viewAllBtn.addEventListener('click', function() {
-      // For now, just show an alert or you can link to a reviews page
-      window.open('https://www.trustpilot.com/review/kaizendesks.com', '_blank');
-    });
-  }
-
-  // Initialize first testimonial
-  updateTestimonial(0);
 });
