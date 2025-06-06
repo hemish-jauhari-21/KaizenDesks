@@ -9,6 +9,7 @@
         content="Digital Design & Development Agency. Let's turn your ideas into captivating digital experiences." />
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/components/loader.css">
+    <link rel="stylesheet" href="../css/components/testimonial.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -85,7 +86,7 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="hero-content">
+        <div class="hero-content hero-content-bg">
             <h1>
                 Let's mix your ideas with our skills and
                 <span class="fancy magic">
@@ -168,66 +169,11 @@
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="section services" style="position:relative; overflow:hidden;">
-        <div class="bg-svg bg-svg-services" aria-hidden="true"></div>
-        <div class="container">
-            <div class="section-heading">
-                <h2 class="cursor-reactive">Our Services</h2>
-                <h3 class="cursor-reactive">Build Smart. Scale Fast. Secure Your Future.</h3>
-            </div>
-            <p class="services-intro">At KaizenDesks, we offer a wide range of digital services to help startups and enterprises unlock growth, automate processes, and build future-ready solutions.</p>
-            <div class="services-carousel-container">
-              <div class="swiper services-swiper">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide service-animated-card">
-                    <img src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?auto=format&fit=crop&w=800&q=80" alt="UI/UX Design" class="service-card-img" />
-                    <div class="services-item_title">UI/UX Design</div>
-                  </div>
-                  <div class="swiper-slide service-animated-card">
-                    <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=800&q=80" alt="Graphic Design" class="service-card-img" />
-                    <div class="services-item_title">Graphic Design</div>
-                  </div>
-                  <div class="swiper-slide service-animated-card">
-                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80" alt="Web Development" class="service-card-img" />
-                    <div class="services-item_title">Web Development</div>
-                  </div>
-                  <div class="swiper-slide service-animated-card">
-                    <img src="https://images.unsplash.com/photo-1634942537034-2531766767d1?auto=format&fit=crop&w=800&q=80" alt="Logo and Branding" class="service-card-img" />
-                    <div class="services-item_title">Logo and Branding</div>
-                  </div>
-                  <div class="swiper-slide service-animated-card">
-                    <img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&w=800&q=80" alt="Motion Graphics" class="service-card-img" />
-                    <div class="services-item_title">Motion Graphics</div>
-                  </div>
-                  <div class="swiper-slide service-animated-card">
-                    <img src="https://images.unsplash.com/photo-1607083206968-13611e3d76db?auto=format&fit=crop&w=800&q=80" alt="Packaging Design" class="service-card-img" />
-                    <div class="services-item_title">Packaging Design</div>
-                  </div>
-                  <div class="swiper-slide service-animated-card">
-                    <img src="https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?auto=format&fit=crop&w=800&q=80" alt="Product Design" class="service-card-img" />
-                    <div class="services-item_title">Product Design</div>
-                  </div>
-                  <div class="swiper-slide service-animated-card">
-                    <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80" alt="Illustration" class="service-card-img" />
-                    <div class="services-item_title">Illustration</div>
-                  </div>
-                  <div class="swiper-slide service-animated-card">
-                    <img src="https://images.unsplash.com/photo-1452587925148-ce544e77e70d?auto=format&fit=crop&w=800&q=80" alt="Photography" class="service-card-img" />
-                    <div class="services-item_title">Photography</div>
-                  </div>
-                </div>
-                <div class="swiper-button-prev custom-swiper-btn"></div>
-                <div class="swiper-button-next custom-swiper-btn"></div>
-              </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Extended Services Section -->
     <section class="extended-services">
-        <div class="hero">
-            <p>We make <span>modern</span> & <span>intuitive</span> solutions for your business</p>
+        <div class="hero" style="position:relative;">
+          <div class="headline-overlay" style="position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(10,20,10,0.65);z-index:1;"></div>
+          <p class="extended-services-headline" style="position:relative; z-index:2;">We make <span>modern</span> & <span>intuitive</span> solutions for your business</p>
         </div>
         <div class="services">
             <div class="top">
@@ -523,6 +469,46 @@
         </div>
     </section>
 
+    <!-- Testimonial Section -->
+    <section class="testimonial-section">
+      <div class="testimonial-container">
+        <div class="testimonial-left">
+          <span class="testimonial-badge">CLIENT'S TESTIMONIAL</span>
+          <h2 class="testimonial-title">Real Stories From People<br>What We Do</h2>
+          <p class="testimonial-desc">We cherish the trust our clients place in us. Through their testimonials, see how our insurance solutions have positively impacted their lives. From easy claims to personalized service, our clients share how we help them.</p>
+          <div class="testimonial-rating">
+            <button class="testimonial-btn">View All Reviews</button>
+            <div class="testimonial-stars">
+              <span class="stars">
+                <img src="https://cdn.trustpilot.net/brand-assets/4.8-stars.svg" alt="4.8 stars" style="height: 28px; vertical-align: middle;"/>
+              </span>
+              <span class="rating-value">4.8</span>
+            </div>
+            <span class="testimonial-reviews">From 200+ Reviews</span>
+          </div>
+        </div>
+        <div class="testimonial-right">
+          <div class="testimonial-card">
+            <span class="testimonial-quote">&ldquo;</span>
+            <p class="testimonial-text">As a small business owner I needed a reliablecoverag. provided comprehensive options tailored to my need. Their support has been invaluable. Their disability too coverage, kept me afloat during a tough time. I will be forever grateful. Their team is always ready to help.</p>
+            <div class="testimonial-user">
+              <img class="testimonial-avatar" src="https://randomuser.me/api/portraits/men/32.jpg" alt="Daniel Scoot"/>
+              <div>
+                <span class="testimonial-name">Mr. Daniel Scoot</span><br>
+                <span class="testimonial-role">CEO at Softconic</span>
+              </div>
+            </div>
+            <span class="testimonial-quote testimonial-quote-end">&rdquo;</span>
+          </div>
+          <div class="testimonial-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Contact Section -->
     <section id="contact" class="section contact" style="position:relative; min-height:500px;">
         <div class="map-background" style="position:absolute; top:0; left:0; width:100%; height:100%; z-index:1; border-radius:0; overflow:hidden;">
@@ -596,55 +582,67 @@
     </section>
 
     <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <h3>KaizenDesks</h3>
-                    <p>Digital Solutions Agency</p>
-                    <div class="social-links">
-                        <a href="#" aria-label="Follow us on Twitter">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
-                            </svg>
-                        </a>
-                        <a href="#" aria-label="Connect with us on LinkedIn">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-                                <rect x="2" y="9" width="4" height="12"></rect>
-                                <circle cx="4" cy="4" r="2"></circle>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-                <div class="footer-links">
-                    <h4>Quick Links</h4>
-                    <a href="#home">Home</a>
-                    <a href="#about">About Us</a>
-                    <a href="#services">Services</a>
-                    <a href="#contact">Contact</a>
-                </div>
-                <div class="footer-contact">
-                    <h4>Contact Us</h4>
-                    <p>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                            <polyline points="22,6 12,13 2,6"></polyline>
-                        </svg>
-                        <span>info@kaizendesks.com</span>
-                    </p>
-                    <p>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-                        </vg>
-                        <span>+1 (123) 456-7890</span>
-                    </p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 KaizenDesks. All rights reserved.</p>
-            </div>
+    <footer class="footer-enhanced">
+      <div class="footer-cta">
+        <h2>Seeking Help? <span>Let's Talk</span></h2>
+        <a href="#contact" class="footer-cta-btn">Get In Touch</a>
+      </div>
+      <div class="footer-main">
+        <div class="footer-col brand-col">
+          <h3><span style="color:#c5ff4a;">Kaizen</span><span style="color:#ff4a4a;">Desks</span></h3>
+          <p>We help you build, grow, and scale your digital presence. Let's create something amazing together.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          </div>
         </div>
+        <div class="footer-col">
+          <h4>Product</h4>
+          <ul>
+            <li><a href="#">E-Books</a></li>
+            <li><a href="#">Press & Media</a></li>
+            <li><a href="#">Testimonials</a></li>
+            <li><a href="#">Cookie Policy</a></li>
+            <li><a href="#">Get a Quote</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#projects-section">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Utility Pages</h4>
+          <ul>
+            <li><a href="#">404 Error Pages</a></li>
+            <li><a href="#">Password Protected</a></li>
+            <li><a href="#">Business Guide</a></li>
+            <li><a href="#">Licensing</a></li>
+            <li><a href="#">Online Community</a></li>
+          </ul>
+        </div>
+        <div class="footer-col quick-contact">
+          <h4>Quick Contact</h4>
+          <ul>
+            <li><i class="fas fa-map-marker-alt"></i> Noida, India</li>
+            <li><i class="fas fa-envelope"></i> info@kaizendesks.com</li>
+            <li><i class="fas fa-phone"></i> +1 (123) 456-7890</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>All Right Reserved &copy; 2025 KaizenDesks.</p>
+        <div class="footer-links-bottom">
+          <a href="#">Privacy Policy</a> |
+          <a href="#">Terms & Conditions</a>
+        </div>
+      </div>
     </footer>
 
     <script src="../js/utils/loader.js"></script>

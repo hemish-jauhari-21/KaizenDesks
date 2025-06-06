@@ -180,41 +180,30 @@ function animateKaizen() {
 
     // Animate each letter of KAIZEN
     const brandLetters = document.querySelectorAll(".header span");
-    let currentLetterIndex = 0;
     
-    function showNextLetter() {
-        if (currentLetterIndex < brandLetters.length) {
-            const currentLetter = brandLetters[currentLetterIndex];
-            
-            gsap.fromTo(currentLetter, 
-                {
-                    y: 200,
-                    opacity: 0,
-                    visibility: "visible"
-                },
-                {
-                    y: 0,
-                    opacity: 1,
-                    duration: 0.6,
-                    ease: "power4.out",
-                    onComplete: () => {
-                        currentLetterIndex++;
-                        if (currentLetterIndex < brandLetters.length) {
-                            showNextLetter();
-                        } else {
-                            // All letters shown, finish loader
-                            setTimeout(() => {
-                                showMainContent();
-                            }, 1000);
-                        }
-                    }
-                }
-            );
+    // Set initial state for all letters
+    gsap.set(brandLetters, {
+        opacity: 0,
+        visibility: "visible"
+    });
+
+    // Create a timeline for sequential animation
+    const tl = gsap.timeline({
+        onComplete: () => {
+            // All letters shown, finish loader
+            setTimeout(() => {
+                showMainContent();
+            }, 1000);
         }
-    }
-    
-    // Start the sequence
-    showNextLetter();
+    });
+
+    // Add each letter animation to the timeline in sequence
+    tl.to(brandLetters[0], { opacity: 1, duration: 0.3 }) // K
+      .to(brandLetters[1], { opacity: 1, duration: 0.3 }, "+=0.2") // A
+      .to(brandLetters[2], { opacity: 1, duration: 0.3 }, "+=0.2") // I
+      .to(brandLetters[3], { opacity: 1, duration: 0.3 }, "+=0.2") // Z
+      .to(brandLetters[4], { opacity: 1, duration: 0.3 }, "+=0.2") // E
+      .to(brandLetters[5], { opacity: 1, duration: 0.3 }, "+=0.2"); // N
 }
 
 // Function to show main content after loader
