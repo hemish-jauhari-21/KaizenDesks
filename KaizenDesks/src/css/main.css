@@ -984,7 +984,8 @@ a:hover {
     padding: 1rem 2rem;
     border: none;
     border-radius: var(--radius);
-    font-weight: 600;
+    box-shadow: 0 10px 20px #030720;
+    font-weight: 700;
     cursor: pointer;
     transition: var(--transition);
     width: 100%;
@@ -1438,16 +1439,27 @@ footer {
     transform: translateY(-3px);
 }
 
+
+
 /* Meeting Button */
 .meeting-button {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    margin-top: 50px; 
+    margin-left: 40px;
+    padding: 12px 50px;
+    /* background: linear-gradient(135deg, var(--primary-color), var(--primary-dark)); */
 }
 
 .meeting-button:hover svg {
     transform: translateX(5px);
+}
+
+/* Touch Button */
+.touch-button {
+    display: inline-flex;
+    width: 200px;
 }
 
 /* Footer Contact Icons */
@@ -1880,32 +1892,40 @@ footer {
 
 .tabs {
     display: flex;
-    gap: 10px;
+    gap: 15px;
     flex-wrap: wrap;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
+    /* justify-content: center; */
 }
 
 .tab-btn {
     background: transparent;
     border: 1px solid var(--primary-color);
-    padding: 10px 20px;
+    padding: 12px 25px;
     border-radius: 30px;
     cursor: pointer;
     font-weight: 700;
     transition: all 0.3s ease;
     color: #030720;
+    font-size: 1.0rem;
+    min-width: 150px;
+    text-align: center;
 }
 
 .tab-btn.active {
     background: #C3F00F;
     color: #030720;
     border-color: #C3F00F;
+    transform: scale(1.00) translateY(-2px) ;
+  box-shadow: 0 5px 32px var(--background), 0 2px 8px #C3F00F;
 }
 
 .tab-btn:hover {
     background: #C3F00F;
     color: #030720;
     border-color: #C3F00F;
+    transform: scale(1.00) translateY(-2px) ;
+    box-shadow: 0 5px 32px var(--primary-color), 0 2px 8px #C3F00F;
 }
 
 .projects-container {
@@ -1997,19 +2017,30 @@ footer {
 }
 
 .project-tag {
-    display: inline-block;
-    padding: 5px 10px;
-    background-color: var(--background-light);
-    border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--background);
     color: var(--primary-color);
-    transition: all 0.3s ease;
+    padding: 8px 16px;
+    border-radius: 30px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    box-shadow: 0 10px 20px #030720;
+    border: none;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(.4,0,.2,1), box-shadow 0.3s, transform 0.2s;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    margin: 4px;
 }
 
 .project-tag:hover {
-    background-color: var(--primary-color);
-    color: white;
+    background: var(--primary-color);
+    color: var(--background);
+    transform: scale(1.00) translateY(-2px);
+    box-shadow: 0 5px 32px var(--primary-color), 0 2px 8px #C3F00F;
 }
 
 @media (max-width: 768px) {
@@ -2359,6 +2390,7 @@ footer {
     background: #C3F00F;
     color: var(--background);
     padding: 12px 24px;
+    width: 250px;
     border: none;
     border-radius: 4px;
     font-weight: 600;
@@ -2374,18 +2406,31 @@ footer {
 .testimonial-stars {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 8px;
+    margin: 15px 0;
+}
+
+.stars {
+    display: flex;
+    gap: 4px;
+}
+
+.star {
+    width: 20px;
+    height: 20px;
 }
 
 .rating-value {
-    color: #ffffff;
     font-size: 1.2rem;
     font-weight: 600;
+    color: #C3F00F;
+    margin-left: 8px;
 }
 
 .testimonial-reviews {
-    color: var(--text-light);
+    color: #888;
     font-size: 0.9rem;
+    margin-left: 8px;
 }
 
 .testimonial-card {
@@ -2398,8 +2443,10 @@ footer {
 
 .testimonial-quote {
     position: absolute;
-    top: 2rem;
-    left: 2rem;
+    margin-top: 5px;
+    margin-left: 1px;
+    top: 1rem;
+    left: 1rem;
     font-size: 4rem;
     color: #C3F00F;
     opacity: 0.5;
@@ -2410,7 +2457,7 @@ footer {
     left: auto;
     right: 2rem;
     top: auto;
-    bottom: 2rem;
+    bottom: 5rem;
 }
 
 .testimonial-text {
@@ -2487,13 +2534,13 @@ footer {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: #e63946;
-  color: #fff;
+  background: var(--primary-color);
+  color: #2d3748;
   padding: 16px 40px;
   border-radius: 50px;
   font-size: 1.2rem;
   font-weight: 700;
-  box-shadow: 0 10px 20px rgba(230, 57, 70, 0.15);
+  box-shadow: 0 10px 20px #030720;
   border: none;
   cursor: pointer;
   transition: all 0.4s cubic-bezier(.4,0,.2,1), box-shadow 0.3s, transform 0.2s;
@@ -2502,22 +2549,26 @@ footer {
   gap: 10px;
   text-align: center;
 }
+
 .cta-button:hover, .cta-button:focus {
-  background: #b71c1c;
-  color: #fff;
-  transform: scale(1.07) translateY(-2px) rotate(-1deg);
-  box-shadow: 0 16px 32px rgba(230, 57, 70, 0.18), 0 2px 8px #e6394644;
+  color: var(--background);
+  transform: scale(1.00) translateY(-2px) ;
+  box-shadow: 0 5px 32px var(--primary-color), 0 2px 8px #C3F00F;
 }
+
 .cta-button:active {
   transform: scale(0.98);
 }
+
 .cta-button svg {
   margin-left: 10px;
   transition: transform 0.3s cubic-bezier(.4,0,.2,1);
 }
+
 .cta-button:hover svg {
-  transform: translateX(8px) scale(1.2) rotate(8deg);
+  transform: translateX(8px) scale(1.2) rotate(90deg);
 }
+
 .cta-button .ripple {
   position: absolute;
   border-radius: 50%;
@@ -2527,9 +2578,168 @@ footer {
   pointer-events: none;
   z-index: 1;
 }
+
 @keyframes ripple {
   to {
     transform: scale(4);
     opacity: 0;
   }
 }
+
+/* Reviews Modal Styles */
+.reviews-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+.reviews-modal.active {
+    display: block;
+}
+
+.reviews-modal-content {
+    position: relative;
+    background-color: #1a1a1a;
+    margin: 50px auto;
+    padding: 30px;
+    width: 90%;
+    max-width: 1200px;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
+}
+
+.reviews-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.reviews-modal-header h2 {
+    color: #fff;
+    font-size: 2rem;
+    margin: 0;
+}
+
+.close-modal {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0;
+    transition: color 0.3s ease;
+}
+
+.close-modal:hover {
+    color: #C3F00F;
+}
+
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 20px 0;
+}
+
+.review-card {
+    background-color: #2a2a2a;
+    border-radius: 12px;
+    padding: 24px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.review-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.review-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.review-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 16px;
+    object-fit: cover;
+}
+
+.review-info h3 {
+    color: #fff;
+    margin: 0 0 4px 0;
+    font-size: 1.1rem;
+}
+
+.review-role {
+    color: #888;
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.review-stars {
+    margin-bottom: 16px;
+}
+
+.review-text {
+    color: #ddd;
+    margin: 0 0 16px 0;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.review-date {
+    color: #888;
+    font-size: 0.85rem;
+}
+
+@media (max-width: 768px) {
+    .reviews-modal-content {
+        margin: 20px;
+        padding: 20px;
+        width: auto;
+    }
+
+    .reviews-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .reviews-modal-header h2 {
+        font-size: 1.5rem;
+    }
+}
+
+
+
+
+
+/* Load More */
+/* #load-more{
+  margin-top: 20px;
+  display: inline-block;
+  padding:13px 30px;
+  border:1px solid #334;
+  color:#334;
+  font-size: 16px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+#load-more:hover{
+  background-color: crimson;
+  border-color: crimson;
+  color:#fff;
+} */
+
+
+
+

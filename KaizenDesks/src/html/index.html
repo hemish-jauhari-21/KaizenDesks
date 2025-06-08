@@ -75,6 +75,7 @@
                 <a href="#home" role="menuitem">Home</a>
                 <a href="#about" role="menuitem">About Us</a>
                 <a href="#services" role="menuitem">Services</a>
+                <a href="#projects-section" role="menuitem">Projects</a>
                 <a href="#contact" role="menuitem">Contact</a>
             </div>
             <button class="menu__btn" aria-label="Toggle menu" aria-expanded="false">
@@ -245,7 +246,7 @@
             <div class="top">
             <div class="section-heading">
                 <h2 class="cursor-reactive">Our Services</h2>
-                <h3 class="cursor-reactive">Build Smart. Scale Fast. Secure Your Future.</h3>
+                <h3 class="cursor-reactive" style="color: white;">Build Smart. Scale Fast. Secure Your Future.</h3>
             </div>
                 <p>
                     Whether you are a development agency looking to outsource design work, a company in search of a
@@ -462,8 +463,8 @@
                                     <span class="project-tag">3D Animation</span>
                                 </div>
                             </div>
-                        </div>
-
+                        </div>                        
+                        
                         <!-- Project Card 4 -->
                         <div class="project-card">
                             <div class="project-image">
@@ -480,7 +481,9 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> 
+
+            <!-- <div id="load-more">Load More</div> -->
 
                 <div class="tab-content" id="cyber">
                     <div class="projects-grid">
@@ -573,10 +576,24 @@
           <h2 class="testimonial-title">Real Stories From People<br>What We Do</h2>
           <p class="testimonial-desc">We cherish the trust our clients place in us. Through their testimonials, see how our insurance solutions have positively impacted their lives. From easy claims to personalized service, our clients share how we help them.</p>
           <div class="testimonial-rating">
-            <button class="testimonial-btn">View All Reviews</button>
+            <button class="cta-button testimonial-btn" id="view-all-reviews">View All Reviews</button>
             <div class="testimonial-stars">
               <span class="stars">
-                <img src="https://cdn.trustpilot.net/brand-assets/4.8-stars.svg" alt="4.8 stars" style="height: 28px; vertical-align: middle;"/>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#C3F00F" class="star">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#C3F00F" class="star">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#C3F00F" class="star">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#C3F00F" class="star">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#C3F00F" class="star">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill-opacity="0.8"/>
+                </svg>
               </span>
               <span class="rating-value">4.8</span>
             </div>
@@ -604,6 +621,107 @@
         </div>
       </div>
     </section>
+
+    <!-- Reviews Modal -->
+    <div class="reviews-modal" id="reviews-modal">
+        <div class="reviews-modal-content">
+            <div class="reviews-modal-header">
+                <h2>All Reviews</h2>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="reviews-grid">
+                <!-- Review Card 1 -->
+                <div class="review-card">
+                    <div class="review-header">
+                        <img class="review-avatar" src="https://randomuser.me/api/portraits/men/32.jpg" alt="Daniel Scott"/>
+                        <div class="review-info">
+                            <h3>Daniel Scott</h3>
+                            <p class="review-role">CEO at Softconic</p>
+                        </div>
+                    </div>
+                    <div class="review-stars">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#C3F00F" class="star">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#C3F00F" class="star">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#C3F00F" class="star">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#C3F00F" class="star">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#C3F00F" class="star">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                    </div>
+                    <p class="review-text">"As a small business owner I needed reliable coverage. KaizenDesks provided comprehensive options tailored to my needs. Their support has been invaluable."</p>
+                    <span class="review-date">March 15, 2024</span>
+                </div>
+
+                <!-- Review Card 2 -->
+                <div class="review-card">
+                    <div class="review-header">
+                        <img class="review-avatar" src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah Johnson"/>
+                        <div class="review-info">
+                            <h3>Sarah Johnson</h3>
+                            <p class="review-role">Marketing Director</p>
+                        </div>
+                    </div>
+                    <div class="review-stars">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#C3F00F" class="star">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#C3F00F" class="star">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#C3F00F" class="star">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#C3F00F" class="star">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#C3F00F" class="star">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                    </div>
+                    <p class="review-text">"The team at KaizenDesks transformed our digital presence completely. Their attention to detail and creative solutions exceeded our expectations."</p>
+                    <span class="review-date">March 10, 2024</span>
+                </div>
+
+                <!-- Review Card 3 -->
+                <div class="review-card">
+                    <div class="review-header">
+                        <img class="review-avatar" src="https://randomuser.me/api/portraits/men/67.jpg" alt="Michael Chen"/>
+                        <div class="review-info">
+                            <h3>Michael Chen</h3>
+                            <p class="review-role">Tech Lead at InnovateTech</p>
+                        </div>
+                    </div>
+                    <div class="review-stars">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#C3F00F" class="star">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#C3F00F" class="star">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#C3F00F" class="star">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#C3F00F" class="star">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#C3F00F" class="star">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                    </div>
+                    <p class="review-text">"Outstanding technical expertise and project management. They delivered our complex web application ahead of schedule and within budget."</p>
+                    <span class="review-date">March 5, 2024</span>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Contact Section -->
     <section id="contact" class="section contact" style="position:relative; min-height:500px;">
@@ -672,7 +790,7 @@
     <section class="cta-section">
         <div class="container">
             <h2>Let's Build Something Great Together</h2>
-            <a href="#contact" class="cta-button">Get in Touch</a>
+            <a href="#contact" class="cta-button touch-button">Get in Touch</a>
         </div>
     </section>
 
@@ -681,7 +799,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <h3>KaizenDesks</h3>
+                    <h3 style="color:#C3F00F;">KaizenDesks</h3>
                     <p>Digital Design & Development Agency. Let's turn your ideas into captivating digital experiences.</p>
                     <div class="social-links">
                         <a href="#" aria-label="Follow us on Twitter">
@@ -749,7 +867,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 KaizenDesks. All rights reserved.</p>
+                <p>&copy; 2025 KaizenDesks. All rights reserved.</p>
                 <div class="footer-bottom-links">
                     <a href="#">Privacy Policy</a>
                     <a href="#">Terms & Conditions</a>
