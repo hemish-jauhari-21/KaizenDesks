@@ -15,7 +15,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places&callback=initMap"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&libraries=places&callback=initMap"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/controls/OrbitControls.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
@@ -75,6 +75,8 @@
                 <a href="#home" role="menuitem">Home</a>
                 <a href="#about" role="menuitem">About Us</a>
                 <a href="#services" role="menuitem">Services</a>
+                <a href="#projects-section" role="menuitem">Projects</a>
+                <a href="blog.html" role="menuitem">Blog</a>
                 <a href="#contact" role="menuitem">Contact</a>
             </div>
             <button class="menu__btn" aria-label="Toggle menu" aria-expanded="false">
@@ -336,8 +338,8 @@
         <div class="qualities" style="position:relative; overflow:hidden;">
             <div class="bg-svg bg-svg-qualities" aria-hidden="true"></div>
             <div class="head">
-                <h2 class="quality-animate-title cursor-reactive">QUALITY</h2>
-                <p class="quality-animate-desc cursor-reactive">
+                <h2>QUALITY</h2>
+                <p>
                     Explore the synergy of our collective expertise, where each team member's distinct talents converge
                     to shape a vision of the product that's truly extraordinary.
                 </p>
@@ -346,22 +348,22 @@
                 <div class="box quality-animate-box">
                     <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=80&q=80" alt="Craftsmanship">
                     <div class="info">
-                        <h3 class="quality-animate-text">Craftsmanship</h3>
-                        <p class="quality-animate-text">Meticulous attention<br>to detail.</p>
+                        <h3>Craftsmanship</h3>
+                        <p>Meticulous attention<br>to detail.</p>
                     </div>
                 </div>
                 <div class="box quality-animate-box">
                     <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=80&q=80" alt="Versatile">
                     <div class="info">
-                        <h3 class="quality-animate-text">Versatile</h3>
-                        <p class="quality-animate-text">Adaptable solutions<br>for your needs.</p>
+                        <h3>Versatile</h3>
+                        <p>Adaptable solutions<br>for your needs.</p>
                     </div>
                 </div>
                 <div class="box quality-animate-box">
                     <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=80&q=80" alt="Efficiency">
                     <div class="info">
-                        <h3 class="quality-animate-text">Efficiency</h3>
-                        <p class="quality-animate-text">Streamlined workflows<br>and solutions.</p>
+                        <h3>Efficiency</h3>
+                        <p>Streamlined workflows<br>and solutions.</p>
                     </div>
                 </div>
             </div>
@@ -369,23 +371,23 @@
                 <div class="box quality-animate-box">
                     <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=80&q=80" alt="Simplicity">
                     <div class="info">
-                        <h3 class="quality-animate-text">Simplicity</h3>
-                        <p class="quality-animate-text">Stripping away the<br>unnecessary.</p>
+                        <h3>Simplicity</h3>
+                        <p>Stripping away the<br>unnecessary.</p>
                     </div>
                     
                 </div>
                 <div class="box quality-animate-box">
-                    <div class="info">
-                        <h3 class="quality-animate-text">Collaboration</h3>
-                        <p class="quality-animate-text">Building together<br>for success.</p>
-                    </div>
                     <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=80&q=80" alt="Collaboration">
+                    <div class="info">
+                        <h3>Collaboration</h3>
+                        <p>Building together<br>for success.</p>
+                    </div>
                 </div>
                 <div class="box quality-animate-box">
                     <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=80&q=80" alt="Security">
                     <div class="info">
-                        <h3 class="quality-animate-text">Security</h3>
-                        <p class="quality-animate-text">Protecting data & systems with<br>robust, up-to-date practices.</p>
+                        <h3>Security</h3>
+                        <p>Protecting data & systems with<br>robust, up-to-date practices.</p>
                     </div>
                 </div>
             </div>
@@ -462,8 +464,8 @@
                                     <span class="project-tag">3D Animation</span>
                                 </div>
                             </div>
-                        </div>
-
+                        </div>                        
+                        
                         <!-- Project Card 4 -->
                         <div class="project-card">
                             <div class="project-image">
@@ -480,7 +482,9 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> 
+
+            <!-- <div id="load-more">Load More</div>  -->
 
                 <div class="tab-content" id="cyber">
                     <div class="projects-grid">
@@ -562,6 +566,9 @@
                     </div>
                 </div>
             </div>
+            <div class="view-more-container">
+                <a href="projects.html" class="view-more-btn">View More Projects</a>
+            </div>
         </div>
     </section>
 
@@ -573,10 +580,24 @@
           <h2 class="testimonial-title">Real Stories From People<br>What We Do</h2>
           <p class="testimonial-desc">We cherish the trust our clients place in us. Through their testimonials, see how our insurance solutions have positively impacted their lives. From easy claims to personalized service, our clients share how we help them.</p>
           <div class="testimonial-rating">
-            <button class="cta-button testimonial-btn">View All Reviews</button>
+            <button class="cta-button testimonial-btn" id="view-all-reviews">View All Reviews</button>
             <div class="testimonial-stars">
               <span class="stars">
-                <img src="https://cdn.trustpilot.net/brand-assets/4.8-stars.svg" alt="4.8 stars" style="height: 28px; vertical-align: middle;"/>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#C3F00F" class="star">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#C3F00F" class="star">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#C3F00F" class="star">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#C3F00F" class="star">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#C3F00F" class="star">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill-opacity="0.8"/>
+                </svg>
               </span>
               <span class="rating-value">4.8</span>
             </div>
@@ -605,11 +626,112 @@
       </div>
     </section>
 
+    <!-- Reviews Modal -->
+    <div class="reviews-modal" id="reviews-modal">
+        <div class="reviews-modal-content">
+            <div class="reviews-modal-header">
+                <h2>All Reviews</h2>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="reviews-grid">
+                <!-- Review Card 1 -->
+                <div class="review-card">
+                    <div class="review-header">
+                        <img class="review-avatar" src="https://randomuser.me/api/portraits/men/32.jpg" alt="Daniel Scott"/>
+                        <div class="review-info">
+                            <h3>Daniel Scott</h3>
+                            <p class="review-role">CEO at Softconic</p>
+                        </div>
+                    </div>
+                    <div class="review-stars">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#C3F00F" class="star">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#C3F00F" class="star">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#C3F00F" class="star">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#C3F00F" class="star">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#C3F00F" class="star">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                    </div>
+                    <p class="review-text">"As a small business owner I needed reliable coverage. KaizenDesks provided comprehensive options tailored to my needs. Their support has been invaluable."</p>
+                    <span class="review-date">March 15, 2024</span>
+                </div>
+
+                <!-- Review Card 2 -->
+                <div class="review-card">
+                    <div class="review-header">
+                        <img class="review-avatar" src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah Johnson"/>
+                        <div class="review-info">
+                            <h3>Sarah Johnson</h3>
+                            <p class="review-role">Marketing Director</p>
+                        </div>
+                    </div>
+                    <div class="review-stars">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#C3F00F" class="star">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#C3F00F" class="star">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#C3F00F" class="star">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#C3F00F" class="star">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#C3F00F" class="star">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                    </div>
+                    <p class="review-text">"The team at KaizenDesks transformed our digital presence completely. Their attention to detail and creative solutions exceeded our expectations."</p>
+                    <span class="review-date">March 10, 2024</span>
+                </div>
+
+                <!-- Review Card 3 -->
+                <div class="review-card">
+                    <div class="review-header">
+                        <img class="review-avatar" src="https://randomuser.me/api/portraits/men/67.jpg" alt="Michael Chen"/>
+                        <div class="review-info">
+                            <h3>Michael Chen</h3>
+                            <p class="review-role">Tech Lead at InnovateTech</p>
+                        </div>
+                    </div>
+                    <div class="review-stars">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#C3F00F" class="star">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#C3F00F" class="star">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#C3F00F" class="star">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#C3F00F" class="star">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#C3F00F" class="star">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                    </div>
+                    <p class="review-text">"Outstanding technical expertise and project management. They delivered our complex web application ahead of schedule and within budget."</p>
+                    <span class="review-date">March 5, 2024</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Contact Section -->
     <section id="contact" class="section contact" style="position:relative; min-height:500px;">
         <div class="map-background" style="position:absolute; top:0; left:0; width:100%; height:100%; z-index:1; border-radius:0; overflow:hidden;">
             <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.817327964624!2d77.3888213150447!3d28.53551698244739!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce511b8b6b7b1%3A0x2b8b6b7b1b8b6b7b!2sNoida%2C%20Uttar%20Pradesh%2C%20India!5e0!3m2!1sen!2sus!4v1680000000000!5m2!1sen!2sus"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3732.527073964839!2d79.0718840751957!3d21.13812398053459!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4c07e2e2e2e2e%3A0x7e2e2e2e2e2e2e2e!2sRamdaspeth%2C%20Nagpur%2C%20Maharashtra%20440010%2C%20India!5e0!3m2!1sen!2sin!4v1680000000000!5m2!1sen!2sin"
                 width="100%" height="100%" style="border:0; filter: grayscale(0.2) brightness(0.9);" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
         <div class="container" style="position:relative; z-index:2; background:rgba(255,255,255,0.95); border-radius:16px; margin-top:2rem; box-shadow:0 4px 24px rgba(0,0,0,0.08);">
@@ -671,8 +793,8 @@
     <!-- Call to Action -->
     <section class="cta-section">
         <div class="container">
-            <h2>Let's Build Something Great Together</h2>
-            <a href="#contact" class="cta-button touch-button">Get in Touch</a>
+            <h2>Let's Build Something Great <br> Together</h2>
+            <a href="https://wa.me/911234567890?text=Hi%20KaizenDesks%2C%20I%20would%20like%20to%20get%20in%20touch!" class="cta-button touch-button" target="_blank">Get in Touch</a>
         </div>
     </section>
 
@@ -722,6 +844,8 @@
                     <a href="#home">Home</a>
                     <a href="#about">About Us</a>
                     <a href="#services">Services</a>
+                    <a href="projects.html">Projects</a>
+                    <a href="blog.html">Blog</a>
                     <a href="#contact">Contact</a>
                 </div>
                 <div class="footer-contact">
@@ -757,6 +881,10 @@
             </div>
         </div>
     </footer>
+
+
+
+    
 
     <script src="../js/utils/loader.js"></script>
     <script src="../js/utils/projects.js"></script>

@@ -1,0 +1,475 @@
+/* Blog Detail Page Styles */
+body {
+    background-color: #030720 !important; /* Set a very dark background to match the image */
+    color: #ffffff !important; /* Force all text on the page to be white */
+}
+
+.blog-detail {
+    padding: 80px 20px; /* Keep horizontal padding */
+    color: #ffffff !important; /* Force all text inside blog-detail to be white */
+}
+
+.blog-detail * {
+    /* REMOVED: color: #ffffff !important; - This was overriding specific text colors */
+}
+
+.blog-header {
+    margin: 0 auto 60px; /* Increased bottom margin for more spacing */
+    text-align: center;
+}
+
+.blog-meta {
+    margin-bottom: 20px;
+}
+
+.blog-date, .blog-category {
+    color: #ffffff !important; /* Ensure date and category are white */
+    font-size: 0.9rem;
+    margin: 0 10px;
+}
+
+.blog-title {
+    font-size: 2.5rem;
+    margin-bottom: 40px; /* Increased bottom margin */
+    line-height: 1.2;
+    color: #C3F00F !important; /* Ensure title is green */
+}
+
+.blog-author {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.author-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.author-info h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #C3F00F !important; /* Ensure author name is green */
+}
+
+.author-info p {
+    margin: 5px 0 0;
+    color: #ffffff !important; /* Ensure author role is white */
+    font-size: 0.9rem;
+}
+
+.blog-featured-image {
+    margin: 40px auto;
+}
+
+.blog-featured-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.blog-content {
+    margin: 0 auto; /* Keep content centered */
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #ffffff !important; /* Ensure all text within blog-content is white */
+}
+
+.blog-content h2 {
+    margin: 50px 0 25px; /* Increased top and bottom margin for headings */
+    font-size: 1.8rem;
+    color: #C3F00F !important; /* Ensure subheadings are green */
+}
+
+.blog-content h3 {
+    margin: 40px 0 15px; /* Added h3 styling for new content */
+    font-size: 1.3rem;
+    color: #C3F00F !important; /* Ensure h3 headings are green */
+}
+
+.blog-content p {
+    margin-bottom: 25px; /* Increased bottom margin for paragraphs */
+    color: #ffffff !important; /* Ensure paragraph text is white */
+}
+
+.blog-intro {
+    font-size: 1.3rem;
+    line-height: 1.6;
+    color: #ffffff !important; /* Ensure blog intro text is white */
+    margin-bottom: 50px; /* Increased bottom margin */
+}
+
+.blog-content-image {
+    width: 100%; /* Ensure images are full width */
+    height: auto;
+    border-radius: 10px;
+    margin: 40px auto; /* Center images and add vertical margin */
+    display: block; /* Ensure margin:auto works */
+}
+
+blockquote {
+    margin: 40px auto;
+    padding: 20px;
+    border-left: 4px solid #C3F00F;
+    background-color: #f8f8f8;
+    font-style: italic;
+    color: #030720 !important; /* Set blockquote text to dark blue */
+}
+
+blockquote cite {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #C3F00F !important; /* Set citation text to green */
+}
+
+.blog-tags {
+    margin: 40px auto;
+}
+
+.tag {
+    display: inline-block;
+    padding: 5px 15px;
+    margin: 0 10px 10px 0;
+    background-color: #f0f0f0;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    color: #000000 !important; /* Ensure tag text is black (assuming tags have light backgrounds) */
+}
+
+.blog-share {
+    margin: 60px auto;
+    text-align: center;
+    padding-top: 40px;
+    border-top: 1px solid #eee;
+}
+
+.share-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.share-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    transition: all 0.3s ease;
+}
+
+.share-button svg {
+    stroke: #000; /* Ensure icons are black on light background */
+}
+
+.share-button:hover {
+    background-color: #C3F00F;
+    transform: translateY(-2px);
+}
+
+.share-button:hover svg {
+    stroke: #fff; /* Ensure icons turn white on green hover background */
+}
+
+.related-posts {
+    max-width: 1200px;
+    margin: 80px auto 0;
+    padding-top: 60px;
+    border-top: 1px solid #eee;
+}
+
+.related-posts h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #C3F00F !important; /* Ensure related posts heading is green */
+}
+
+.related-posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.related-post-card {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.related-post-card:hover {
+    transform: translateY(-5px);
+}
+
+.related-post-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.related-post-card h3 {
+    padding: 20px;
+    margin: 0;
+    font-size: 1.2rem;
+    color: #000000 !important; /* Keep black for light background */
+}
+
+.read-more {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 0 20px 20px;
+    color: #000000 !important; /* Ensure read more link is black (assuming light background) */
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.read-more:hover {
+    color: #a3d00c;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .blog-title {
+        font-size: 2rem;
+    }
+
+    .blog-content {
+        font-size: 1rem;
+    }
+
+    .blog-intro {
+        font-size: 1.1rem;
+    }
+
+    .related-posts-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .blog-title {
+        font-size: 1.8rem;
+    }
+
+    .blog-meta {
+        flex-direction: column;
+    }
+
+    .blog-date, .blog-category {
+        margin: 5px 0;
+    }
+
+    .share-buttons {
+        gap: 10px;
+    }
+}
+
+/* Comments Section Styles */
+.comments-section {
+    margin: 80px auto;
+    padding-top: 60px;
+    border-top: 1px solid #eee;
+    color: #ffffff !important; /* Force all text inside comments-section to be white for the heading and overall section */
+}
+
+.comments-section * {
+    color: #ffffff !important; /* Force all descendant elements inside comments-section to be white */
+}
+
+.comments-section h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    text-align: center;
+    color: #C3F00F !important; /* Ensure comments heading is green */
+}
+
+.comment-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.comment-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    color: #000000 !important; /* Ensure all text within comment-card is black (as it has a light background) */
+}
+
+.comment-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.comment-content {
+    flex-grow: 1;
+}
+
+.comment-meta {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.comment-author {
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-right: 10px;
+    color: #000000 !important; /* Keep black for light background */
+}
+
+.comment-date {
+    color: #000000 !important; /* Ensure comment date is black (assuming light background) */
+    font-size: 0.9rem;
+}
+
+.comment-text {
+    margin-bottom: 10px;
+    line-height: 1.6;
+    color: #000000 !important; /* Ensure comment text is black (assuming light background) */
+}
+
+.reply-link {
+    color: #C3F00F;
+    text-decoration: none;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.reply-link:hover {
+    color: #a3d00c;
+}
+
+/* Comment Form Section Styles */
+.comment-form-section {
+    margin: 80px auto;
+    padding: 40px; /* Adjusted padding for the box structure */
+    background-color: #ffffff; /* White background for the box */
+    border-radius: 10px; /* Rounded corners for the box */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border-top: none; /* Remove previous border-top if it conflicts */
+    text-align: center;
+}
+
+.comment-form-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #000000; /* Heading text black for white background */
+}
+
+.comment-form-section p {
+    font-size: 0.9rem;
+    color: #555; /* Slightly lighter grey for description */
+    margin-bottom: 40px;
+}
+
+.comment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.form-group-inline {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+}
+
+.form-group-inline input,
+.form-group textarea {
+    width: 100%;
+    padding: 15px 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #333; /* Input text color */
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #888;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #C3F00F;
+    outline: none;
+}
+
+.send-message-button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 30px;
+    background-color: #C3F00F; /* Green button color */
+    color: #000; /* Black text on green button */
+    border: none;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.send-message-button:hover {
+    background-color: #a3d00c; /* Darker green on hover */
+    transform: translateY(-2px);
+}
+
+.send-message-button svg {
+    width: 20px;
+    height: 20px;
+    stroke: #000; /* Black arrow */
+}
+
+/* Responsive styles for comments and form */
+@media (max-width: 600px) {
+    .comment-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .comment-avatar {
+        margin-bottom: 15px;
+    }
+
+    .comment-meta {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .comment-author {
+        margin-right: 0;
+    }
+    .form-group-inline {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .send-message-button {
+        width: 100%;
+        justify-content: center;
+    }
+} 

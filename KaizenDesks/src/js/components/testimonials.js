@@ -70,4 +70,39 @@ document.addEventListener('DOMContentLoaded', () => {
 setInterval(() => {
     currentTestimonialIndex = (currentTestimonialIndex + 1) % testimonials.length;
     updateTestimonial(currentTestimonialIndex);
-}, 5000); // Change testimonial every 5 seconds 
+}, 5000); // Change testimonial every 5 seconds
+
+// Reviews Modal Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const viewAllReviewsBtn = document.getElementById('view-all-reviews');
+    const reviewsModal = document.getElementById('reviews-modal');
+    const closeModalBtn = document.querySelector('.close-modal');
+
+    // Open modal
+    viewAllReviewsBtn.addEventListener('click', function() {
+        reviewsModal.classList.add('active');
+        document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
+    });
+
+    // Close modal
+    closeModalBtn.addEventListener('click', function() {
+        reviewsModal.classList.remove('active');
+        document.body.style.overflow = ''; // Restore scrolling
+    });
+
+    // Close modal when clicking outside
+    reviewsModal.addEventListener('click', function(e) {
+        if (e.target === reviewsModal) {
+            reviewsModal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    });
+
+    // Close modal on escape key press
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && reviewsModal.classList.contains('active')) {
+            reviewsModal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    });
+}); 
