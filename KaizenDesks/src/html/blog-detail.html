@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+    <title>KaizenDesks - Blog Detail</title>
+    <meta name="description" content="Read detailed blog posts from KaizenDesks." />
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/components/loader.css">
+    <link rel="stylesheet" href="../css/blog-detail.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+
+<body>
+    <div class="load">
+        <div class="pre-loader">
+            <div class="loader"></div>
+            <div class="loader-bg"></div>
+        </div>
+        <div class="loader-content">
+            <div class="count">
+                <p>0</p>
+            </div>
+            <div class="copy">
+                <p class="ml16">Kaizen</p>
+            </div>
+        </div>
+
+        <div class="titles">
+            <div>
+                <span>where</span>
+            </div>
+            <div>
+                <span>imagination</span>
+            </div>
+            <div>
+                <span>meets</span>
+            </div>
+            <div>
+                <span>creativity</span>
+            </div>
+        </div>
+
+        <div class="brand">
+            <div class="header">
+                <span>k</span>
+                <span>a</span>
+                <span>i</span>
+                <span>z</span>
+                <span>e</span>
+                <span>n</span>
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <a href="index.html" class="logo" aria-label="KaizenDesks">
+                <span class="logo-text">KaizenDesks</span>
+            </a>
+            <div class="menu__items" role="menu">
+                <a href="index.html#home" role="menuitem">Home</a>
+                <a href="index.html#about" role="menuitem">About Us</a>
+                <a href="index.html#services" role="menuitem">Services</a>
+                <a href="index.html#projects-section" role="menuitem">Projects</a>
+                <a href="blog.html" role="menuitem">Blog</a>
+                <a href="index.html#contact" role="menuitem">Contact</a>
+            </div>
+            <button class="menu__btn" aria-label="Toggle menu" aria-expanded="false">
+                <span class="menu-icon"></span>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <article class="blog-detail">
+            <div class="container">
+                <div class="blog-header">
+                    <div class="blog-meta">
+                        <span class="blog-date">07 Mar 2025</span>
+                        <span class="blog-category">Technology</span>
+                    </div>
+                    <h1 class="blog-title">How leading tech is reshaping global industries</h1>
+                    <div class="blog-author">
+                        <img src="https://picsum.photos/seed/author1/100/100" alt="Author Name" class="author-image">
+                        <div class="author-info">
+                            <h3>John Doe</h3>
+                            <p>Technology Writer</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="blog-featured-image">
+                    <img src="https://picsum.photos/seed/blog1/1200/600" alt="Featured Blog Image">
+                </div>
+
+                <div class="blog-content">
+                    <p class="blog-intro">
+                        The rapid advancement of technology is fundamentally transforming how businesses operate and compete in the global marketplace. From artificial intelligence to blockchain, these innovations are not just changing individual companies but entire industries.
+                    </p>
+
+                    <h2>The Impact of AI on Business Operations</h2>
+                    <p>
+                        Artificial Intelligence has become a cornerstone of modern business operations. Companies are leveraging AI to automate processes, enhance decision-making, and create more personalized customer experiences. The integration of AI systems has led to significant improvements in efficiency and productivity across various sectors.
+                    </p>
+
+                    <h2>Blockchain Revolution in Finance</h2>
+                    <p>
+                        The financial sector has been particularly impacted by blockchain technology. This distributed ledger technology is revolutionizing how transactions are processed, verified, and recorded. The implications for security, transparency, and efficiency are profound, leading to new business models and opportunities.
+                    </p>
+
+                    <blockquote>
+                        "Technology is not just a tool. It can give learners a voice that they may not have had before."
+                        <cite>- George Couros</cite>
+                    </blockquote>
+
+                    <h2>The Future of Work</h2>
+                    <p>
+                        As technology continues to evolve, the nature of work itself is changing. Remote work, digital collaboration, and automated systems are becoming the norm. This shift requires both businesses and workers to adapt and develop new skills to remain competitive in the digital age.
+                    </p>
+
+                    <div class="blog-tags">
+                        <span class="tag">Technology</span>
+                        <span class="tag">Innovation</span>
+                        <span class="tag">Business</span>
+                        <span class="tag">Digital Transformation</span>
+                    </div>
+                </div>
+
+                <div class="blog-share">
+                    <h3>Share this article</h3>
+                    <div class="share-buttons">
+                        <a href="https://twitter.com/" class="share-button twitter" aria-label="Share on Twitter">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                            </svg>
+                        </a>
+                        <a href="https://linkedin.com/" class="share-button linkedin" aria-label="Share on LinkedIn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                <rect x="2" y="9" width="4" height="12"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                        </a>
+                        <a href="https://facebook.com/" class="share-button facebook" aria-label="Share on Facebook">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                            </svg>
+                        </a>
+                        <a href="https://instagram.com/" class="share-button instagram" aria-label="Share on Instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                        <a href="https://pinterest.com/" class="share-button pinterest" aria-label="Share on Pinterest">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10c4.98 0 9.176-3.792 9.808-8.736L22 12a10 10 0 0 0-10-10zM10.5 17.5c-1.933 0-3.5-1.567-3.5-3.5 0-1.933 1.567-3.5 3.5-3.5 1.933 0 3.5 1.567 3.5 3.5 0 1.933-1.567 3.5-3.5 3.5zM12 10.5V6a2 2 0 0 1 2-2h2c1.105 0 2 .895 2 2v2c0 1.105-.895 2-2 2h-2v1.5a1.5 1.5 0 0 1-1.5 1.5z"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="comments-section">
+                    <h2>Comments</h2>
+                    <div class="comment-list">
+                        <div class="comment-card">
+                            <img src="https://picsum.photos/seed/mellisa/100/100" alt="Mellisa Doe" class="comment-avatar">
+                            <div class="comment-content">
+                                <div class="comment-meta">
+                                    <span class="comment-author">Mellisa Doe</span>
+                                    <span class="comment-date">February 19, 2025</span>
+                                </div>
+                                <p class="comment-text">We guide our clients through difficult issues, bringing our insight and judgment to each situation. Our innovative approaches create original solutions</p>
+                                <a href="#" class="reply-link">REPLY</a>
+                            </div>
+                        </div>
+                        <div class="comment-card">
+                            <img src="https://picsum.photos/seed/rayan/100/100" alt="Rayan Keller" class="comment-avatar">
+                            <div class="comment-content">
+                                <div class="comment-meta">
+                                    <span class="comment-author">Rayan Keller</span>
+                                    <span class="comment-date">February 19, 2025</span>
+                                </div>
+                                <p class="comment-text">We guide our clients through difficult issues, bringing our insight and judgment to each situation. Our innovative approaches create original solutions</p>
+                                <a href="#" class="reply-link">REPLY</a>
+                            </div>
+                        </div>
+                        <div class="comment-card">
+                            <img src="https://picsum.photos/seed/admin/100/100" alt="admin" class="comment-avatar">
+                            <div class="comment-content">
+                                <div class="comment-meta">
+                                    <span class="comment-author">admin</span>
+                                    <span class="comment-date">February 19, 2025</span>
+                                </div>
+                                <p class="comment-text">We guide our clients through difficult issues, bringing our insight and judgment to each situation. Our innovative approaches create original solutions</p>
+                                <a href="#" class="reply-link">REPLY</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="related-posts">
+                    <h2>Related Articles</h2>
+                    <div class="related-posts-grid">
+                        <div class="related-post-card">
+                            <img src="https://picsum.photos/seed/blog2/400/300" alt="Related Post 1">
+                            <h3>Why digital transformation drives modern businesses</h3>
+                            <a href="#" class="read-more">Read More</a>
+                        </div>
+                        <div class="related-post-card">
+                            <img src="https://picsum.photos/seed/blog3/400/300" alt="Related Post 2">
+                            <h3>How automation trends are impacting global industries</h3>
+                            <a href="#" class="read-more">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Let's Build Something Great <br> Together</h2>
+            <a href="https://wa.me/911234567890?text=Hi%20KaizenDesks%2C%20I%20would%20like%20to%20get%20in%20touch!" class="cta-button touch-button" target="_blank">Get in Touch</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3 style="color:#C3F00F;">KaizenDesks</h3>
+                    <p>Digital Design & Development Agency. Let's turn your ideas into captivating digital experiences.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Follow us on Twitter">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Connect with us on LinkedIn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                <rect x="2" y="9" width="4" height="12"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Follow us on Instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Contact us on WhatsApp">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Product</h4>
+                    <a href="#">E-Books</a>
+                    <a href="#">Press & Media</a>
+                    <a href="#">Testimonials</a>
+                    <a href="#">Get a Quote</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <a href="index.html#home">Home</a>
+                    <a href="index.html#about">About Us</a>
+                    <a href="index.html#services">Services</a>
+                    <a href="projects.html">Projects</a>
+                    <a href="blog.html">Blog</a>
+                    <a href="index.html#contact">Contact</a>
+                </div>
+                <div class="footer-contact">
+                    <h4>Quick Contact</h4>
+                    <p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        <span>123 Business Avenue, LA, USA 90001</span>
+                    </p>
+                    <p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                        <span>info@kaizendesks.com</span>
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 KaizenDesks. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/blog-detail.js"></script>
+</body>
+
+</html> 
