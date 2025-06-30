@@ -77,32 +77,57 @@ document.addEventListener('DOMContentLoaded', function() {
     const viewAllReviewsBtn = document.getElementById('view-all-reviews');
     const reviewsModal = document.getElementById('reviews-modal');
     const closeModalBtn = document.querySelector('.close-modal');
+    const modalContent = document.querySelector('.reviews-modal-content');
+    let lastScrollY = window.scrollY;
+    let scrollTimeout;
 
     // Open modal
     viewAllReviewsBtn.addEventListener('click', function() {
         reviewsModal.classList.add('active');
-        document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
+        document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        lastScrollY = window.scrollY; // Store current scroll position
     });
 
-    // Close modal
-    closeModalBtn.addEventListener('click', function() {
+    // Close modal function
+    function closeModal() {
         reviewsModal.classList.remove('active');
         document.body.style.overflow = ''; // Restore scrolling
-    });
+    }
+
+    // Close modal button
+    closeModalBtn.addEventListener('click', closeModal);
 
     // Close modal when clicking outside
     reviewsModal.addEventListener('click', function(e) {
         if (e.target === reviewsModal) {
-            reviewsModal.classList.remove('active');
-            document.body.style.overflow = '';
+            closeModal();
         }
     });
 
-    // Close modal on escape key press
+    // Close modal on escape key
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape' && reviewsModal.classList.contains('active')) {
-            reviewsModal.classList.remove('active');
-            document.body.style.overflow = '';
+            closeModal();
         }
     });
+
+    // Close modal on scroll
+    window.addEventListener('scroll', function() {
+        if (reviewsModal.classList.contains('active')) {
+            clearTimeout(scrollTimeout);
+            scrollTimeout = setTimeout(closeModal, 100);
+        }
+    }, { passive: true });
+
+    // Enable modal content scrolling while preventing background scroll
+    modalContent.addEventListener('wheel', function(e) {
+        const scrollTop = modalContent.scrollTop;
+        const scrollHeight = modalContent.scrollHeight;
+        const height = modalContent.clientHeight;
+
+        if ((scrollTop === 0 && e.deltaY < 0) || 
+            (scrollTop + height >= scrollHeight && e.deltaY > 0)) {
+            e.preventDefault();
+        }
+    }, { passive: false });
 }); 

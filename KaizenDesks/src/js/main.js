@@ -302,6 +302,88 @@ function initScrollEffects() {
 // Initialize service cards functionality
 function initServiceCards() {
     // Implement service card specific JavaScript here
+    // GSAP entrance animation for service cards
+    if (window.gsap && document.querySelector('.service-animated-card')) {
+        gsap.from('.service-animated-card', {
+            opacity: 0,
+            y: 50,
+            stagger: 0.15,
+            duration: 1,
+            ease: 'power3.out',
+            scrollTrigger: {
+                trigger: '.services-animated-grid',
+                start: 'top 80%',
+            }
+        });
+        document.querySelectorAll('.service-animated-card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                gsap.to(card, { scale: 1.07, boxShadow: '0 8px 32px #c3f00f88', duration: 0.3 });
+            });
+            card.addEventListener('mouseleave', () => {
+                gsap.to(card, { scale: 1, boxShadow: '0 4px 20px rgba(0,0,0,0.1)', duration: 0.3 });
+            });
+        });
+    }
+
+    // GSAP entrance animation for horizontal scroll gallery
+    if (window.gsap && document.querySelector('.service-panel')) {
+        gsap.from('.service-panel', {
+            x: 100,
+            opacity: 0,
+            stagger: 0.2,
+            duration: 1,
+            ease: 'power3.out',
+            scrollTrigger: {
+                trigger: '.services-scroll-gallery',
+                start: 'top 80%',
+            }
+        });
+    }
+
+    // GSAP entrance animation for interactive grid
+    if (window.gsap && document.querySelector('.service-tile')) {
+        gsap.from('.service-tile', {
+            y: 60,
+            opacity: 0,
+            stagger: 0.15,
+            duration: 1,
+            ease: 'power3.out',
+            scrollTrigger: {
+                trigger: '.services-interactive-grid',
+                start: 'top 80%',
+            }
+        });
+    }
+
+    // GSAP entrance animation for timeline/stepper
+    if (window.gsap && document.querySelector('.timeline-step')) {
+        gsap.from('.timeline-step', {
+            x: -60,
+            opacity: 0,
+            stagger: 0.15,
+            duration: 1,
+            ease: 'power3.out',
+            scrollTrigger: {
+                trigger: '.services-timeline',
+                start: 'top 80%',
+            }
+        });
+    }
+
+    // GSAP entrance animation for masonry/waterfall layout
+    if (window.gsap && document.querySelector('.masonry-card')) {
+        gsap.from('.masonry-card', {
+            y: 60,
+            opacity: 0,
+            stagger: 0.15,
+            duration: 1,
+            ease: 'power3.out',
+            scrollTrigger: {
+                trigger: '.services-masonry',
+                start: 'top 80%',
+            }
+        });
+    }
 }
 
 // Initialize form validation
@@ -310,29 +392,11 @@ function initFormValidation() {
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
-            const submitButton = contactForm.querySelector('.submit-button');
-            submitButton.classList.add('loading');
-            submitButton.disabled = true;
-
-            // Simulate form submission
-            setTimeout(() => {
-                const isSuccess = Math.random() > 0.5; // Simulate success/failure
-                if (isSuccess) {
-                    submitButton.classList.remove('loading');
-                    submitButton.classList.add('success');
-                    submitButton.innerHTML = '<span>Message Sent!</span>';
-                } else {
-                    submitButton.classList.remove('loading');
-                    submitButton.classList.add('error');
-                    submitButton.innerHTML = '<span>Failed to Send</span>';
-                }
-                setTimeout(() => {
-                    submitButton.classList.remove('success', 'error');
-                    submitButton.innerHTML = '<span>Send Message</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>';
-                    submitButton.disabled = false;
-                    contactForm.reset();
-                }, 3000);
-            }, 2000);
+            const name = contactForm.querySelector('input[name="name"]').value;
+            const email = contactForm.querySelector('input[name="email"]').value;
+            const message = contactForm.querySelector('textarea[name="message"]').value;
+            const mailto = `mailto:kaizendesks@gmail.com?cc=deepak.singh@gmail.com&subject=Appointment%20booking&body=Hello,%20my%20name%20is%20${encodeURIComponent(name)}%20(%20${encodeURIComponent(email)}%20).%20I%20would%20like%20to%20book%20an%20appointment.%0A%0AMessage:%20${encodeURIComponent(message)}`;
+            window.location.href = mailto;
         });
 
         document.querySelectorAll('.form-group input, .form-group textarea').forEach(input => {
@@ -548,6 +612,42 @@ function initCursorReactive() {
 // function loadMoreProjects() {
 //     // This function is now primarily handled by projects.js for the projects page
 // }
+
+// Accordion expand/collapse logic and GSAP animation
+const accordionHeaders = document.querySelectorAll('.accordion-header');
+accordionHeaders.forEach(header => {
+  header.addEventListener('click', function() {
+    const item = this.parentElement;
+    const panel = item.querySelector('.accordion-panel');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.accordion-item.open').forEach(openItem => {
+      if (openItem !== item) {
+        openItem.classList.remove('open');
+        openItem.querySelector('.accordion-panel').style.maxHeight = null;
+      }
+    });
+    if (!isOpen) {
+      item.classList.add('open');
+      panel.style.maxHeight = panel.scrollHeight + 'px';
+      if (window.gsap) {
+        gsap.fromTo(panel.querySelector('.accordion-content'), {y: 30, opacity: 0}, {y: 0, opacity: 1, duration: 0.5, ease: 'power2.out'});
+      }
+    } else {
+      item.classList.remove('open');
+      panel.style.maxHeight = null;
+    }
+  });
+});
+
+// Flip on tap for masonry cards (mobile support)
+document.querySelectorAll('.masonry-card').forEach(card => {
+  card.addEventListener('click', function(e) {
+    // Only trigger on small screens or if not hovering
+    if (window.innerWidth <= 900 || !window.matchMedia('(hover: hover)').matches) {
+      this.classList.toggle('flipped');
+    }
+  });
+});
 
 
 

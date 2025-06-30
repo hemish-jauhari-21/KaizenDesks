@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
@@ -22,6 +23,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/plugins/TextPlugin.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/plugins/ScrollToPlugin.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
 </head>
 
 <body>
@@ -178,69 +180,14 @@
         </div>
     </section>
 
-    <!-- Services Section -->
-    <!-- <section id="services" class="section services" style="position:relative; overflow:hidden;">
-        <div class="bg-svg bg-svg-services" aria-hidden="true"></div>
-        <div class="container">
-            <div class="section-heading">
-                <h2 class="cursor-reactive">Our Services</h2>
-                <h3 class="cursor-reactive">Build Smart. Scale Fast. Secure Your Future.</h3>
-            </div>
-            <p class="services-intro">At KaizenDesks, we offer a wide range of digital services to help startups and enterprises unlock growth, automate processes, and build future-ready solutions.</p>
-            <div class="services-carousel-container">
-              <div class="swiper services-swiper">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide service-animated-card">
-                    <img src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?auto=format&fit=crop&w=800&q=80" alt="UI/UX Design" class="service-card-img" />
-                    <div class="services-item_title">UI/UX Design</div>
-                  </div>
-                  <div class="swiper-slide service-animated-card">
-                    <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=800&q=80" alt="Graphic Design" class="service-card-img" />
-                    <div class="services-item_title">Graphic Design</div>
-                  </div>
-                  <div class="swiper-slide service-animated-card">
-                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80" alt="Web Development" class="service-card-img" />
-                    <div class="services-item_title">Web Development</div>
-                  </div>
-                  <div class="swiper-slide service-animated-card">
-                    <img src="https://images.unsplash.com/photo-1634942537034-2531766767d1?auto=format&fit=crop&w=800&q=80" alt="Logo and Branding" class="service-card-img" />
-                    <div class="services-item_title">Logo and Branding</div>
-                  </div>
-                  <div class="swiper-slide service-animated-card">
-                    <img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&w=800&q=80" alt="Motion Graphics" class="service-card-img" />
-                    <div class="services-item_title">Motion Graphics</div>
-                  </div>
-                  <div class="swiper-slide service-animated-card">
-                    <img src="https://images.unsplash.com/photo-1607083206968-13611e3d76db?auto=format&fit=crop&w=800&q=80" alt="Packaging Design" class="service-card-img" />
-                    <div class="services-item_title">Packaging Design</div>
-                  </div>
-                  <div class="swiper-slide service-animated-card">
-                    <img src="https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?auto=format&fit=crop&w=800&q=80" alt="Product Design" class="service-card-img" />
-                    <div class="services-item_title">Product Design</div>
-                  </div>
-                  <div class="swiper-slide service-animated-card">
-                    <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80" alt="Illustration" class="service-card-img" />
-                    <div class="services-item_title">Illustration</div>
-                  </div>
-                  <div class="swiper-slide service-animated-card">
-                    <img src="https://images.unsplash.com/photo-1452587925148-ce544e77e70d?auto=format&fit=crop&w=800&q=80" alt="Photography" class="service-card-img" />
-                    <div class="services-item_title">Photography</div>
-                  </div>
-                </div>
-                <div class="swiper-button-prev custom-swiper-btn"></div>
-                <div class="swiper-button-next custom-swiper-btn"></div>
-              </div>
-            </div> 
-        </div>
-    </section> -->
-
-    
-
     <!-- Extended Services Section -->
     <section id="services" class="extended-services">
 
         <div class="hero">
-            <p>We make <span>modern</span> & <span>intuitive</span> solutions for your business</p>
+            <div class="marquee-container">
+                <span class="marquee-text">We make modern & intuitive solutions for your business .</span>
+                <span class="marquee-text">We make modern & intuitive solutions for your business</span>
+            </div>
         </div>
         
         <div  class="services">
@@ -258,78 +205,121 @@
             </div>
         </div>
 
-        <div class="format-container">
-            <div class="services_box services-animated-grid">
-                <div class="services_item service-animated-card">
-                    <div class="services-item_link">
-                        <div class="services-item_bg"></div>
-                        <img src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?auto=format&fit=crop&w=800&q=80" alt="UI/UX Design" class="service-card-img" />
-                        <div class="services-item_title">UI/UX Design</div>
-                        <div class="service-desc">We create intuitive and engaging user interfaces for your digital products.</div>
+        <div class="services-masonry">
+            <div class="masonry-card">
+                <div class="masonry-card-inner">
+                    <div class="masonry-card-front">
+                        <img src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?auto=format&fit=crop&w=800&q=80" alt="UI/UX Design" class="masonry-img" />
+                        <h3 class="masonry-title">UI/UX Design</h3>
+                    </div>
+                    <div class="masonry-card-back">
+                        <h3 class="masonry-back-title">UI/UX Design</h3>
+                        <p class="masonry-desc masonry-desc-bold">We create intuitive and engaging user interfaces for your digital products.</p>
+                        <a href="#contact" class="masonry-cta masonry-cta-bold">Get Started</a>
                     </div>
                 </div>
-                <div class="services_item service-animated-card">
-                    <div class="services-item_link">
-                        <div class="services-item_bg"></div>
-                        <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=800&q=80" alt="Graphic Design" class="service-card-img" />                        
-                        <div class="services-item_title">Graphic Design</div>
-                        <div class="service-desc">Creative visual solutions for branding, marketing, and communication.</div>
+            </div>
+            <div class="masonry-card">
+                <div class="masonry-card-inner">
+                    <div class="masonry-card-front">
+                        <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=800&q=80" alt="Graphic Design" class="masonry-img" />
+                        <h3 class="masonry-title">Graphic Design</h3>
+                    </div>
+                    <div class="masonry-card-back">
+                        <h3 class="masonry-back-title">Graphic Design</h3>
+                        <p class="masonry-desc masonry-desc-bold">Creative visual solutions for branding, marketing, and communication.</p>
+                        <a href="#contact" class="masonry-cta masonry-cta-bold">Get Started</a>
                     </div>
                 </div>
-                <div class="services_item service-animated-card">
-                    <div class="services-item_link">
-                        <div class="services-item_bg"></div>
-                        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80" alt="Web Development" class="service-card-img" />
-                        <div class="services-item_title">Web Development</div>
-                        <div class="service-desc">Robust and scalable web solutions tailored to your business needs.</div>
+            </div>
+            <div class="masonry-card">
+                <div class="masonry-card-inner">
+                    <div class="masonry-card-front">
+                        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80" alt="Web Development" class="masonry-img" />
+                        <h3 class="masonry-title">Web Development</h3>
+                    </div>
+                    <div class="masonry-card-back">
+                        <h3 class="masonry-back-title">Web Development</h3>
+                        <p class="masonry-desc masonry-desc-bold">Robust and scalable web solutions tailored to your business needs.</p>
+                        <a href="#contact" class="masonry-cta masonry-cta-bold">Get Started</a>
                     </div>
                 </div>
-                <div class="services_item service-animated-card">
-                    <div class="services-item_link">
-                        <div class="services-item_bg"></div>
-                        <img src="https://images.unsplash.com/photo-1634942537034-2531766767d1?auto=format&fit=crop&w=800&q=80" alt="Logo and Branding" class="service-card-img" />
-                        <div class="services-item_title">Logo and Branding</div>
-                        <div class="service-desc">Distinctive logos and branding to make your business stand out.</div>
+            </div>
+            <div class="masonry-card">
+                <div class="masonry-card-inner">
+                    <div class="masonry-card-front">
+                        <img src="https://images.unsplash.com/photo-1634942537034-2531766767d1?auto=format&fit=crop&w=800&q=80" alt="Logo and Branding" class="masonry-img" />
+                        <h3 class="masonry-title">Logo and Branding</h3>
+                    </div>
+                    <div class="masonry-card-back">
+                        <h3 class="masonry-back-title">Logo and Branding</h3>
+                        <p class="masonry-desc masonry-desc-bold">Distinctive logos and branding to make your business stand out.</p>
+                        <a href="#contact" class="masonry-cta masonry-cta-bold">Get Started</a>
                     </div>
                 </div>
-                <div class="services_item service-animated-card">
-                    <div class="services-item_link">
-                        <div class="services-item_bg"></div>
-                        <img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&w=800&q=80" alt="Motion Graphics" class="service-card-img" />
-                        <div class="services-item_title">Motion Graphics</div>
-                        <div class="service-desc">Dynamic animations and videos to bring your ideas to life.</div>
+            </div>
+            <div class="masonry-card">
+                <div class="masonry-card-inner">
+                    <div class="masonry-card-front">
+                        <img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&w=800&q=80" alt="Motion Graphics" class="masonry-img" />
+                        <h3 class="masonry-title">Motion Graphics</h3>
+                    </div>
+                    <div class="masonry-card-back">
+                        <h3 class="masonry-back-title">Motion Graphics</h3>
+                        <p class="masonry-desc masonry-desc-bold">Dynamic animations and videos to bring your ideas to life.</p>
+                        <a href="#contact" class="masonry-cta masonry-cta-bold">Get Started</a>
                     </div>
                 </div>
-                <div class="services_item service-animated-card">
-                    <div class="services-item_link">
-                        <div class="services-item_bg"></div>
-                        <img src="https://images.unsplash.com/photo-1607083206968-13611e3d76db?auto=format&fit=crop&w=800&q=80" alt="Packaging Design" class="service-card-img" />
-                        <div class="services-item_title">Packaging Design</div>
-                        <div class="service-desc">Attractive and functional packaging for your products.</div>
+            </div>
+            <div class="masonry-card">
+                <div class="masonry-card-inner">
+                    <div class="masonry-card-front">
+                        <img src="https://images.unsplash.com/photo-1607083206968-13611e3d76db?auto=format&fit=crop&w=800&q=80" alt="Packaging Design" class="masonry-img" />
+                        <h3 class="masonry-title">Packaging Design</h3>
+                    </div>
+                    <div class="masonry-card-back">
+                        <h3 class="masonry-back-title">Packaging Design</h3>
+                        <p class="masonry-desc masonry-desc-bold">Attractive and functional packaging for your products.</p>
+                        <a href="#contact" class="masonry-cta masonry-cta-bold">Get Started</a>
                     </div>
                 </div>
-                <div class="services_item service-animated-card">
-                    <div class="services-item_link">
-                        <div class="services-item_bg"></div>
-                        <img src="https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?auto=format&fit=crop&w=800&q=80" alt="Product Design" class="service-card-img" />
-                        <div class="services-item_title">Product Design</div>
-                        <div class="service-desc">Innovative product design from concept to launch.</div>
+            </div>
+            <div class="masonry-card">
+                <div class="masonry-card-inner">
+                    <div class="masonry-card-front">
+                        <img src="https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?auto=format&fit=crop&w=800&q=80" alt="Product Design" class="masonry-img" />
+                        <h3 class="masonry-title">Product Design</h3>
+                    </div>
+                    <div class="masonry-card-back">
+                        <h3 class="masonry-back-title">Product Design</h3>
+                        <p class="masonry-desc masonry-desc-bold">Innovative product design from concept to launch.</p>
+                        <a href="#contact" class="masonry-cta masonry-cta-bold">Get Started</a>
                     </div>
                 </div>
-                <div class="services_item service-animated-card">
-                    <div class="services-item_link">
-                        <div class="services-item_bg"></div>
-                        <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80" alt="Illustration" class="service-card-img" />
-                        <div class="services-item_title">Illustration</div>
-                        <div class="service-desc">Custom illustrations to enhance your brand and message.</div>
+            </div>
+            <div class="masonry-card">
+                <div class="masonry-card-inner">
+                    <div class="masonry-card-front">
+                        <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80" alt="Illustration" class="masonry-img" />
+                        <h3 class="masonry-title">Illustration</h3>
+                    </div>
+                    <div class="masonry-card-back">
+                        <h3 class="masonry-back-title">Illustration</h3>
+                        <p class="masonry-desc masonry-desc-bold">Custom illustrations to enhance your brand and message.</p>
+                        <a href="#contact" class="masonry-cta masonry-cta-bold">Get Started</a>
                     </div>
                 </div>
-                <div class="services_item service-animated-card">
-                    <div class="services-item_link">
-                        <div class="services-item_bg"></div>
-                        <img src="https://images.unsplash.com/photo-1452587925148-ce544e77e70d?auto=format&fit=crop&w=800&q=80" alt="Photography" class="service-card-img" />
-                        <div class="services-item_title">Photography</div>
-                        <div class="service-desc">Professional photography services for all your needs.</div>
+            </div>
+            <div class="masonry-card">
+                <div class="masonry-card-inner">
+                    <div class="masonry-card-front">
+                        <img src="https://images.unsplash.com/photo-1452587925148-ce544e77e70d?auto=format&fit=crop&w=800&q=80" alt="Photography" class="masonry-img" />
+                        <h3 class="masonry-title">Photography</h3>
+                    </div>
+                    <div class="masonry-card-back">
+                        <h3 class="masonry-back-title">Photography</h3>
+                        <p class="masonry-desc masonry-desc-bold">Professional photography services for all your needs.</p>
+                        <a href="#contact" class="masonry-cta masonry-cta-bold">Get Started</a>
                     </div>
                 </div>
             </div>
@@ -349,26 +339,49 @@
                     <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=80&q=80" alt="Craftsmanship">
                     <div class="info">
                         <h3>Craftsmanship</h3>
-                        <p>Meticulous attention<br>to detail.</p>
+                        <p>Attention<br>to detail.</p>
                     </div>
                 </div>
                 <div class="box quality-animate-box">
                     <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=80&q=80" alt="Versatile">
                     <div class="info">
                         <h3>Versatile</h3>
-                        <p>Adaptable solutions<br>for your needs.</p>
+                        <p>Adaptable solutions.</p>
                     </div>
                 </div>
                 <div class="box quality-animate-box">
                     <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=80&q=80" alt="Efficiency">
                     <div class="info">
                         <h3>Efficiency</h3>
-                        <p>Streamlined workflows<br>and solutions.</p>
+                        <p>Streamlined <br>solutions.</p>
+                    </div>
+                </div>
+
+                <div class="box quality-animate-box">
+                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=80&q=80" alt="Simplicity">
+                    <div class="info">
+                        <h3>Simplicity</h3>
+                        <p>Stripping away the<br>unnecessary.</p>
+                    </div>
+                    
+                </div>
+                <div class="box quality-animate-box">
+                    <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=80&q=80" alt="Collaboration">
+                    <div class="info">
+                        <h3>Collaboration</h3>
+                        <p>Building <br>for success.</p>
+                    </div>
+                </div>
+                <div class="box quality-animate-box">
+                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=80&q=80" alt="Security">
+                    <div class="info">
+                        <h3>Security</h3>
+                        <p>Protecting data & systems.</p>
                     </div>
                 </div>
             </div>
             <div class="bottom">
-                <div class="box quality-animate-box">
+                <!-- <div class="box quality-animate-box">
                     <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=80&q=80" alt="Simplicity">
                     <div class="info">
                         <h3>Simplicity</h3>
@@ -389,7 +402,7 @@
                         <h3>Security</h3>
                         <p>Protecting data & systems with<br>robust, up-to-date practices.</p>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
 
@@ -601,7 +614,6 @@
               </span>
               <span class="rating-value">4.8</span>
             </div>
-            <span class="testimonial-reviews">From 200+ Reviews</span>
           </div>
         </div>
         <div class="testimonial-right">
@@ -757,7 +769,7 @@
                         </div>
                     </div>
                     <p>Or simply book a virtual meeting. We're just a message away.</p>
-                    <a href="#" class="cta-button meeting-button">
+                    <a href="https://wa.me/911234567890?text=Hi%20KaizenDesks%2C%20I%20would%20like%20to%20book%20a%20consultation!" class="cta-button meeting-button" target="_blank">
                         <span>Book a Free Consultation</span>
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <line x1="5" y1="12" x2="19" y2="12"></line>
@@ -837,7 +849,7 @@
                     <a href="#">E-Books</a>
                     <a href="#">Press & Media</a>
                     <a href="#">Testimonials</a>
-                    <a href="#">Get a Quote</a>
+                    <a href="https://wa.me/911234567890?text=Hi%20KaizenDesks%2C%20I%20would%20like%20to%20get%20a%20quote!" target="_blank">Get a Quote</a>
                 </div>
                 <div class="footer-links">
                     <h4>Company</h4>
@@ -881,16 +893,10 @@
             </div>
         </div>
     </footer>
-
-
-
-    
-
     <script src="../js/utils/loader.js"></script>
     <script src="../js/utils/projects.js"></script>
     <script src="../js/components/testimonials.js"></script>
     <script src="../js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </body>
-
 </html>
