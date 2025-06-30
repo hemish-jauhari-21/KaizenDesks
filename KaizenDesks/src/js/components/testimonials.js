@@ -77,6 +77,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const viewAllReviewsBtn = document.getElementById('view-all-reviews');
     const reviewsModal = document.getElementById('reviews-modal');
     const closeModalBtn = document.querySelector('.close-modal');
+
     const modalContent = document.querySelector('.reviews-modal-content');
     let lastScrollY = window.scrollY;
     let scrollTimeout;
@@ -130,4 +131,5 @@ document.addEventListener('DOMContentLoaded', function() {
             e.preventDefault();
         }
     }, { passive: false });
+
 }); 

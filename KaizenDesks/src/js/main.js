@@ -399,6 +399,7 @@ function initFormValidation() {
             window.location.href = mailto;
         });
 
+
         document.querySelectorAll('.form-group input, .form-group textarea').forEach(input => {
             input.addEventListener('focus', () => {
                 input.closest('.form-group').classList.add('focused');
@@ -648,6 +649,7 @@ document.querySelectorAll('.masonry-card').forEach(card => {
     }
   });
 });
+
 
 
 
