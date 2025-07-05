@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (!window.projectsData) {
         // If projectsData is not loaded yet, fetch projects.js
         const script = document.createElement("script");
-        script.src = "../js/utils/projects.js";
+        script.src = "projects.js";
         script.onload = () => loadProjectDetails(projectId);
         document.head.appendChild(script);
     } else {

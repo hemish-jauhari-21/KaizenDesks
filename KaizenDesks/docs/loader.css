@@ -1,22 +1,22 @@
 /* Loader Styles */
 @font-face {
     font-family: "Barracuda";
-    src: url("../../assets/fonts/Barracuda.woff2") format("woff2");
+    src: url("assets/fonts/Barracuda.woff2") format("woff2");
 }
 
 @font-face {
     font-family: "Recoleta";
-    src: url("../../assets/fonts/Recoleta-Regular.woff2") format("woff2");
+    src: url("assets/fonts/Recoleta-Regular.woff2") format("woff2");
 }
 
 @font-face {
     font-family: "Gallery Modern";
-    src: url("../../assets/fonts/GalleryModern.woff2") format("woff2");
+    src: url("assets/fonts/GalleryModern.woff2") format("woff2");
 }
 
 @font-face {
     font-family: "Utendo";
-    src: url("../../assets/fonts/Utendo-Regular.woff2") format("woff2");
+    src: url("assets/fonts/Utendo-Regular.woff2") format("woff2");
 }
 
 #loader-container {

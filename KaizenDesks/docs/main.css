@@ -18,22 +18,22 @@
 /* Font imports */
 @font-face {
     font-family: "Barracuda";
-    src: url("../fonts/Barracuda.woff2") format("woff2");
+    src: url("fonts/Barracuda.woff2") format("woff2");
 }
 
 @font-face {
     font-family: "Recoleta";
-    src: url("../fonts/Recoleta-Regular.woff2") format("woff2");
+    src: url("fonts/Recoleta-Regular.woff2") format("woff2");
 }
 
 @font-face {
     font-family: "Gallery Modern";
-    src: url("../fonts/GalleryModern.woff2") format("woff2");
+    src: url("fonts/GalleryModern.woff2") format("woff2");
 }
 
 @font-face {
     font-family: "Utendo";
-    src: url("../fonts/Utendo-Regular.woff2") format("woff2");
+    src: url("fonts/Utendo-Regular.woff2") format("woff2");
 }
 
 #loader-container {
