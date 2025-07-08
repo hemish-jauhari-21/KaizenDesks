@@ -3682,7 +3682,7 @@ body.projects-page .projects-section .projects-grid .project-card {
     text-shadow: 0 0 6px #C3F00F66, 0 0 12px #C3F00F44;
   }
   50% {
-    text-shadow: 0 0 12px #C3F00Fcc, 0 0 24px #C3F00F88;
+    text-shadow: 0 0 6px #C3F00F66, 0 0 12px #C3F00F44;
   }
 }
 
